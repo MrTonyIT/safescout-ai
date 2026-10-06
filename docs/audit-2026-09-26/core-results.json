@@ -1,0 +1,92 @@
+[
+  {
+    "name": "All wrong offline submission",
+    "observed": {
+      "score": 100,
+      "isPassed": true,
+      "correctCount": 2
+    }
+  },
+  {
+    "name": "Offline PIN 0000 accepted",
+    "observed": true
+  },
+  {
+    "name": "Offline PIN change reports success",
+    "observed": {
+      "success": true,
+      "message": "Đổi mã PIN phụ huynh thành công (Chế độ ngoại tuyến)."
+    }
+  },
+  {
+    "name": "New offline PIN accepted",
+    "observed": false
+  },
+  {
+    "name": "Badge zone 8 before reload",
+    "observed": 1
+  },
+  {
+    "name": "Badge zone 8 after reload",
+    "observed": 0
+  },
+  {
+    "name": "Offline handbook zones",
+    "observed": 4
+  },
+  {
+    "name": "Two completions same day",
+    "observed": {
+      "before": 7,
+      "after": 9
+    }
+  },
+  {
+    "name": "Offline AI scan",
+    "observed": "SAFE"
+  },
+  {
+    "name": "Server master PIN accepted",
+    "observed": true
+  },
+  {
+    "name": "PNG icon.png",
+    "observed": {
+      "width": 1,
+      "height": 1,
+      "bytes": 70
+    }
+  },
+  {
+    "name": "PNG splash.png",
+    "observed": {
+      "width": 1,
+      "height": 1,
+      "bytes": 70
+    }
+  },
+  {
+    "name": "PNG adaptive-icon.png",
+    "observed": {
+      "width": 1,
+      "height": 1,
+      "bytes": 70
+    }
+  },
+  {
+    "name": "PNG favicon.png",
+    "observed": {
+      "width": 1,
+      "height": 1,
+      "bytes": 70
+    }
+  },
+  {
+    "name": "PNG milo_rescue_pup.png",
+    "observed": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 982214
+    }
+  }
+]

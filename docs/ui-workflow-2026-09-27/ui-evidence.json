@@ -1,0 +1,667 @@
+{
+  "createdAt": "2026-09-27T02:14:43.429Z",
+  "scope": "Current local web build; synthetic profile; no answer submitted; not native performance evidence",
+  "screens": [
+    {
+      "name": "current-map-320",
+      "width": 320,
+      "height": 568,
+      "scrollWidth": 320,
+      "controls": [
+        {
+          "label": "🌿 An toàn tại nhà",
+          "x": 16,
+          "y": 164,
+          "width": 288,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "🏰 Tìm người lớn trợ giúp · 🔒",
+          "x": 16,
+          "y": 221,
+          "width": 288,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "⭐ Ranh giới cơ thể · 🔒",
+          "x": 16,
+          "y": 278,
+          "width": 288,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Cốc nước vừa rót",
+          "x": 87,
+          "y": 726,
+          "width": 60,
+          "height": 60,
+          "disabled": false
+        },
+        {
+          "label": "Học phần 1",
+          "x": 51,
+          "y": 922,
+          "width": 193,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Viên nhỏ trên bàn",
+          "x": 173,
+          "y": 1069,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 76,
+          "y": 1244,
+          "width": 193,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Bật lửa cạnh ghế",
+          "x": 87,
+          "y": 1391,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 51,
+          "y": 1566,
+          "width": 193,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Đã ra điểm hẹn",
+          "x": 173,
+          "y": 1713,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 76,
+          "y": 1888,
+          "width": 193,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Tìm bài theo tên hoặc chủ đề",
+          "x": 16,
+          "y": 2213,
+          "width": 288,
+          "height": 52,
+          "disabled": false
+        },
+        {
+          "label": "Tiếp tục: Cốc nước vừa rót",
+          "x": 16,
+          "y": 2281,
+          "width": 288,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Tải lại danh sách bài",
+          "x": 16,
+          "y": 2351,
+          "width": 288,
+          "height": 56,
+          "disabled": false
+        }
+      ],
+      "text": "MILO · HỌC VIỆN THÁM HIỂM\nBản đồ phiêu lưu\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\n🌿 An toàn tại nhà\n🏰 Tìm người lớn trợ giúp · 🔒\n⭐ Ranh giới cơ thể · 🔒\nHỌC VIỆN THÁM HIỂM\nAn toàn tại nhà\n0/4 chặng đã hoàn thành\nCùng Milo khám phá nhé! Chọn một hòn đảo để bắt đầu.\n1\nCốc nước vừa rót\n✦ Sẵn sàng khám phá · 0/1 phần đã đạt\nHọc phần 1\nViên nhỏ trên bàn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nBật lửa cạnh ghế\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nĐã ra điểm hẹn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\n🏁\nMỗi chặng học, một điều để cùng thực hành.\nTiếp tục: Cốc nước vừa rót\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP là điểm hoạt động học, không xác nhận năng lực cứu hộ. Camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "current-map-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "controls": [
+        {
+          "label": "🌿 An toàn tại nhà",
+          "x": 16,
+          "y": 164,
+          "width": 358,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "🏰 Tìm người lớn trợ giúp · 🔒",
+          "x": 16,
+          "y": 221,
+          "width": 358,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "⭐ Ranh giới cơ thể · 🔒",
+          "x": 16,
+          "y": 278,
+          "width": 358,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Cốc nước vừa rót",
+          "x": 87,
+          "y": 699,
+          "width": 60,
+          "height": 60,
+          "disabled": false
+        },
+        {
+          "label": "Học phần 1",
+          "x": 51,
+          "y": 874,
+          "width": 256,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Viên nhỏ trên bàn",
+          "x": 243,
+          "y": 1021,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 83,
+          "y": 1196,
+          "width": 256,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Bật lửa cạnh ghế",
+          "x": 87,
+          "y": 1343,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 51,
+          "y": 1518,
+          "width": 256,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Đã ra điểm hẹn",
+          "x": 243,
+          "y": 1665,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 83,
+          "y": 1840,
+          "width": 256,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Tìm bài theo tên hoặc chủ đề",
+          "x": 16,
+          "y": 2165,
+          "width": 358,
+          "height": 52,
+          "disabled": false
+        },
+        {
+          "label": "Tiếp tục: Cốc nước vừa rót",
+          "x": 16,
+          "y": 2233,
+          "width": 358,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Tải lại danh sách bài",
+          "x": 16,
+          "y": 2303,
+          "width": 358,
+          "height": 56,
+          "disabled": false
+        }
+      ],
+      "text": "MILO · HỌC VIỆN THÁM HIỂM\nBản đồ phiêu lưu\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\n🌿 An toàn tại nhà\n🏰 Tìm người lớn trợ giúp · 🔒\n⭐ Ranh giới cơ thể · 🔒\nHỌC VIỆN THÁM HIỂM\nAn toàn tại nhà\n0/4 chặng đã hoàn thành\nCùng Milo khám phá nhé! Chọn một hòn đảo để bắt đầu.\n1\nCốc nước vừa rót\n✦ Sẵn sàng khám phá · 0/1 phần đã đạt\nHọc phần 1\nViên nhỏ trên bàn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nBật lửa cạnh ghế\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nĐã ra điểm hẹn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\n🏁\nMỗi chặng học, một điều để cùng thực hành.\nTiếp tục: Cốc nước vừa rót\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP là điểm hoạt động học, không xác nhận năng lực cứu hộ. Camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "current-map-768",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "controls": [
+        {
+          "label": "🌿 An toàn tại nhà",
+          "x": 16,
+          "y": 142,
+          "width": 194,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "🏰 Tìm người lớn trợ giúp · 🔒",
+          "x": 218,
+          "y": 142,
+          "width": 289,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "⭐ Ranh giới cơ thể · 🔒",
+          "x": 515,
+          "y": 142,
+          "width": 237,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Cốc nước vừa rót",
+          "x": 87,
+          "y": 563,
+          "width": 60,
+          "height": 60,
+          "disabled": false
+        },
+        {
+          "label": "Học phần 1",
+          "x": 51,
+          "y": 738,
+          "width": 298,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Viên nhỏ trên bàn",
+          "x": 621,
+          "y": 885,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 419,
+          "y": 1060,
+          "width": 298,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Bật lửa cạnh ghế",
+          "x": 87,
+          "y": 1207,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 51,
+          "y": 1382,
+          "width": 298,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Đã ra điểm hẹn",
+          "x": 621,
+          "y": 1529,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 419,
+          "y": 1704,
+          "width": 298,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Tìm bài theo tên hoặc chủ đề",
+          "x": 16,
+          "y": 2004,
+          "width": 736,
+          "height": 52,
+          "disabled": false
+        },
+        {
+          "label": "Tiếp tục: Cốc nước vừa rót",
+          "x": 16,
+          "y": 2072,
+          "width": 736,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Tải lại danh sách bài",
+          "x": 16,
+          "y": 2142,
+          "width": 736,
+          "height": 56,
+          "disabled": false
+        }
+      ],
+      "text": "MILO · HỌC VIỆN THÁM HIỂM\nBản đồ phiêu lưu\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\n🌿 An toàn tại nhà\n🏰 Tìm người lớn trợ giúp · 🔒\n⭐ Ranh giới cơ thể · 🔒\nHỌC VIỆN THÁM HIỂM\nAn toàn tại nhà\n0/4 chặng đã hoàn thành\nCùng Milo khám phá nhé! Chọn một hòn đảo để bắt đầu.\n1\nCốc nước vừa rót\n✦ Sẵn sàng khám phá · 0/1 phần đã đạt\nHọc phần 1\nViên nhỏ trên bàn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nBật lửa cạnh ghế\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nĐã ra điểm hẹn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\n🏁\nMỗi chặng học, một điều để cùng thực hành.\nTiếp tục: Cốc nước vừa rót\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP là điểm hoạt động học, không xác nhận năng lực cứu hộ. Camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "current-map-1440",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "controls": [
+        {
+          "label": "🌿 An toàn tại nhà",
+          "x": 290,
+          "y": 142,
+          "width": 236,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "🏰 Tìm người lớn trợ giúp · 🔒",
+          "x": 534,
+          "y": 142,
+          "width": 330,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "⭐ Ranh giới cơ thể · 🔒",
+          "x": 872,
+          "y": 142,
+          "width": 278,
+          "height": 49,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Cốc nước vừa rót",
+          "x": 361,
+          "y": 563,
+          "width": 60,
+          "height": 60,
+          "disabled": false
+        },
+        {
+          "label": "Học phần 1",
+          "x": 325,
+          "y": 738,
+          "width": 298,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Viên nhỏ trên bàn",
+          "x": 1019,
+          "y": 885,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 817,
+          "y": 1060,
+          "width": 298,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Bật lửa cạnh ghế",
+          "x": 361,
+          "y": 1207,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 325,
+          "y": 1382,
+          "width": 298,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Đã ra điểm hẹn",
+          "x": 1019,
+          "y": 1529,
+          "width": 60,
+          "height": 60,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 817,
+          "y": 1704,
+          "width": 298,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Tìm bài theo tên hoặc chủ đề",
+          "x": 290,
+          "y": 2004,
+          "width": 860,
+          "height": 52,
+          "disabled": false
+        },
+        {
+          "label": "Tiếp tục: Cốc nước vừa rót",
+          "x": 290,
+          "y": 2072,
+          "width": 860,
+          "height": 54,
+          "disabled": false
+        },
+        {
+          "label": "Tải lại danh sách bài",
+          "x": 290,
+          "y": 2142,
+          "width": 860,
+          "height": 56,
+          "disabled": false
+        }
+      ],
+      "text": "MILO · HỌC VIỆN THÁM HIỂM\nBản đồ phiêu lưu\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\n🌿 An toàn tại nhà\n🏰 Tìm người lớn trợ giúp · 🔒\n⭐ Ranh giới cơ thể · 🔒\nHỌC VIỆN THÁM HIỂM\nAn toàn tại nhà\n0/4 chặng đã hoàn thành\nCùng Milo khám phá nhé! Chọn một hòn đảo để bắt đầu.\n1\nCốc nước vừa rót\n✦ Sẵn sàng khám phá · 0/1 phần đã đạt\nHọc phần 1\nViên nhỏ trên bàn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nBật lửa cạnh ghế\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\nĐã ra điểm hẹn\n🔒 Chưa mở · 0/1 phần đã đạt\nHọc phần 1\n🏁\nMỗi chặng học, một điều để cùng thực hành.\nTiếp tục: Cốc nước vừa rót\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP là điểm hoạt động học, không xác nhận năng lực cứu hộ. Camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "current-lesson-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "controls": [
+        {
+          "label": "🌿 An toàn tại nhà",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "🏰 Tìm người lớn trợ giúp · 🔒",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "⭐ Ranh giới cơ thể · 🔒",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Cốc nước vừa rót",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "Học phần 1",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "Khám phá: Viên nhỏ trên bàn",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Bật lửa cạnh ghế",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": true
+        },
+        {
+          "label": "Khám phá: Đã ra điểm hẹn",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": true
+        },
+        {
+          "label": "Học phần 1",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": true
+        },
+        {
+          "label": "Tìm bài theo tên hoặc chủ đề",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "Tiếp tục: Cốc nước vừa rót",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "Tải lại danh sách bài",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "disabled": false
+        },
+        {
+          "label": "Về danh sách bài",
+          "x": 16,
+          "y": 104,
+          "width": 358,
+          "height": 56,
+          "disabled": false
+        },
+        {
+          "label": "Xem nguồn dành cho người lớn",
+          "x": 37,
+          "y": 736,
+          "width": 316,
+          "height": 56,
+          "disabled": false
+        },
+        {
+          "label": "Bật đọc khi bấm Nghe",
+          "x": 37,
+          "y": 931,
+          "width": 316,
+          "height": 56,
+          "disabled": false
+        },
+        {
+          "label": "Đưa tay thật nhanh qua cốc.",
+          "x": 37,
+          "y": 1003,
+          "width": 316,
+          "height": 64,
+          "disabled": false
+        },
+        {
+          "label": "Nhờ người lớn chuyển cốc và lấy giúp.",
+          "x": 37,
+          "y": 1083,
+          "width": 316,
+          "height": 92,
+          "disabled": false
+        },
+        {
+          "label": "Xác nhận lựa chọn",
+          "x": 37,
+          "y": 1191,
+          "width": 316,
+          "height": 54,
+          "disabled": true
+        },
+        {
+          "label": "Chưa biết — xem lời giải",
+          "x": 37,
+          "y": 1261,
+          "width": 316,
+          "height": 56,
+          "disabled": false
+        }
+      ],
+      "text": "MILO · HỌC VIỆN THÁM HIỂM\nCốc nước vừa rót\nVề danh sách bài\nNHIỆM VỤ CÙNG MILO\nChặng thử thách 1 / 2\nĐã lưu bản nháp trên thiết bị.\nCùng đọc trước khi chọn\nBài nháp có AI hỗ trợ · Chưa được chuyên gia duyệt · Chỉ để người lớn kiểm tra.\nChọn cách tránh vật có thể gây bỏng.\nAn thấy cốc nước bốc hơi cạnh quyển truyện. An muốn lấy truyện nhưng tay sẽ phải đưa qua cốc.\nDừng lại và nhờ người lớn lấy giúp khi đồ vật ở gần vật nóng.\nXem nguồn dành cho người lớn\nCâu 1/2 · Không tính giờ giới hạn\nAn nên lấy truyện thế nào?\nBật đọc khi bấm Nghe\nĐưa tay thật nhanh qua cốc.\nNhờ người lớn chuyển cốc và lấy giúp.\nXác nhận lựa chọn\nChưa biết — xem lời giải"
+    }
+  ]
+}

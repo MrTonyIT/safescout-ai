@@ -1,0 +1,37 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+null !== 'true'
+
+MILO / EXPLORER
+0 XP
+MỘT NGÀY · MỘT KHÁM PHÁ
+Lên đường cùng Milo
+Bản nội bộ · Chờ duyệt nội dung
+Theo nhịp của bạn
+Đóng
+Tùy chọn trên thiết bị này. Việc học không phụ thuộc âm thanh hay chuyển động.
+Giảm chuyển động
+Giữ Milo và cảnh ở trạng thái tĩnh để dễ tập trung.
+Âm thanh hiệu ứng
+Chưa dùng trong bản thử này.
+Rung nhẹ
+Chưa dùng trong bản thử này.
+Tiếp tục: Cốc nước vừa rót
+CHƯƠNG 01
+An toàn tại nhà
+0/4 chặng hoàn thành
+Chạm đảo để khám phá
+CHẶNG CỦA CON
+1
+Cốc nước vừa rót
+0/1 phần đã đạt
+Viên nhỏ trên bàn
+0/1 phần đã đạt
+Bật lửa cạnh ghế
+0/1 phần đã đạt
+Đã ra điểm hẹn
+0/1 phần đã đạt
+Từng bước, cùng lớn lên
+0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành
+XP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.
+Một chút khám phá. Một điều để cùng thực hành.

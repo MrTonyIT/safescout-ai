@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-09-26T12:59:27.682Z",
+  "originalFindings": 50,
+  "newFindings": 8,
+  "brokenLinks": [],
+  "tests26Passed": true,
+  "browserPassed": true,
+  "assets": {
+    "icon": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 37895
+    },
+    "adaptive-icon": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 37895
+    },
+    "splash": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 37895
+    },
+    "favicon": {
+      "width": 64,
+      "height": 64,
+      "bytes": 2261
+    }
+  },
+  "sourceHashes": {
+    "src/modules/learning/learning.service.ts": "c1b53ae6394aaed52c4cd387ea447892e3ae12579ba8461f00c187b95194092a",
+    "mobile/src/screens/LearningFlow.tsx": "391086d96cd136d7f24920f314604ccd1fc934af4840c3f4c5d4ba65683f29aa",
+    "mobile/src/services/attemptQueue.ts": "0ea276653b7e29248ef82941e563a8ae1d0474bdf5ddd5ef406a0ae00ee45e4b",
+    "prisma/seed.ts": "010cab15a68984b1a7272251d0d5d9515c1987d39d3bc0a0aa430eed8d133de2",
+    "test/workflow.test.cjs": "59cfc084beac558ae88f5d413310b0983eda6cc1389f729f8b705e2f89800a25"
+  }
+}

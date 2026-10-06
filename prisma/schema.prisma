@@ -1,0 +1,344 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ==========================================
+// USER & PARENT GATE MODELS
+// ==========================================
+
+model User {
+  id                String               @id @default(cuid())
+  familyId          String?
+  family            Family?              @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  nickname          String
+  avatarUrl         String?
+  age               Int                  @default(7)
+  ageGroup          String               @default("EARLY_EXPLORER") // EARLY_EXPLORER | ADVANCED_SCOUT
+  explorerLevel     Int                  @default(1)
+  totalSafetyScore  Int                  @default(0)
+  totalBadges       Int                  @default(0)
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  // Relationships
+  parentGate        ParentGate?
+  lessonProgress    UserLessonProgress[]
+  testResults       TestResult[]
+  mistakeLogs       MistakeLog[]
+  userBadges        UserBadge[]
+  lessonRewards     LessonReward[]
+
+  @@map("users")
+}
+
+model Family {
+  id           String @id @default(cuid())
+  login        String @unique
+  passwordHash String
+  recoveryHash String
+  createdAt    DateTime @default(now())
+  children     User[]
+  sessions     FamilySession[]
+  feedback     FamilyFeedback[]
+  @@map("families")
+}
+
+model FamilyFeedback {
+  id String @id @default(cuid())
+  familyId String
+  category String
+  message String
+  checkpointId String?
+  contentVersion String?
+  status String @default("OPEN")
+  createdAt DateTime @default(now())
+  family Family @relation(fields:[familyId],references:[id],onDelete:Cascade)
+  @@index([status, createdAt])
+  @@map("family_feedback")
+}
+
+model FamilySession {
+  tokenHash String @id
+  familyId String
+  expiresAt DateTime
+  family Family @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  @@index([familyId])
+  @@map("family_sessions")
+}
+
+model AuthThrottle {
+  key String @id
+  count Int @default(1)
+  expiresAt DateTime
+  @@map("auth_throttles")
+}
+
+model ContentApproval {
+  id String @id @default(cuid())
+  checkpointId String
+  contentVersion String
+  status String @default("DRAFT")
+  reviewer String?
+  source String?
+  reviewedAt DateTime?
+  ageMin Int @default(7)
+  ageMax Int @default(10)
+  snapshot String
+  @@unique([checkpointId, contentVersion])
+  @@map("content_approvals")
+}
+
+model ParentGate {
+  id                      String   @id @default(cuid())
+  userId                  String   @unique
+  pinHash                 String
+  parentEmail             String?
+  parentPhone             String?
+  dailyTimeLimitMinutes   Int      @default(30)
+  emergencyContactEnabled Boolean  @default(true)
+  weeklyReportEnabled     Boolean  @default(true)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("parent_gates")
+}
+
+// ==========================================
+// SURVIVAL CURRICULUM ARCHITECTURE (10 ZONES)
+// ==========================================
+
+model Zone {
+  id          String   @id @default(cuid())
+  zoneNumber  Int      @unique
+  title       String
+  description String
+  iconName    String
+  themeColor  String   @default("#004E89")
+  unlockLevel Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  stages Stage[]
+  badges Badge[]
+
+  @@map("zones")
+}
+
+model Stage {
+  id          String   @id @default(cuid())
+  zoneId      String
+  stageNumber Int
+  title       String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  zone    Zone     @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+  lessons Lesson[]
+
+  @@unique([zoneId, stageNumber])
+  @@map("stages")
+}
+
+model Lesson {
+  id              String   @id @default(cuid())
+  stageId         String
+  lessonNumber    Int
+  title           String
+  description     String
+  lessonType      String   @default("STORY_INTERACTIVE") // STORY_INTERACTIVE | PRACTICE
+  contentJson     String   // Structured narrative text / interactive scenarios
+  durationMinutes Int      @default(5)
+  rewardXp        Int      @default(100)
+  badgeShardName  String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  stage          Stage                @relation(fields: [stageId], references: [id], onDelete: Cascade)
+  checkpoints    Checkpoint[]
+  userProgress   UserLessonProgress[]
+  rewards        LessonReward[]
+
+  @@unique([stageId, lessonNumber])
+  @@map("lessons")
+}
+
+model Checkpoint {
+  id                 String   @id @default(cuid())
+  lessonId           String
+  checkpointNumber   Int
+  title              String
+  description        String
+  passScoreThreshold Int      @default(80) // Passing score percentage (e.g. 80%)
+  timeLimitSeconds   Int      @default(60) // Total time allocated for reflex checkpoint
+  badgeShardReward   String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  lesson      Lesson         @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questions   TestQuestion[]
+  testResults TestResult[]
+
+  @@unique([lessonId, checkpointNumber])
+  @@map("checkpoints")
+}
+
+model TestQuestion {
+  id               String   @id @default(cuid())
+  checkpointId     String
+  questionNumber   Int
+  promptText       String
+  questionType     String   @default("SINGLE_CHOICE") // SINGLE_CHOICE | TIMED_REFLEX | DRAG_DROP_ORDER
+  hazardLevel      String   @default("SAFE") // SAFE | CAUTION | CRITICAL_EMERGENCY
+  timeLimitSeconds Int      @default(5) // Strict timed reflex limit (e.g. 5 seconds)
+  explanation      String
+  orderIndex       Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  checkpoint  Checkpoint       @relation(fields: [checkpointId], references: [id], onDelete: Cascade)
+  options     QuestionOption[]
+  mistakeLogs MistakeLog[]
+
+  @@unique([checkpointId, questionNumber])
+  @@map("test_questions")
+}
+
+model QuestionOption {
+  id             String   @id @default(cuid())
+  testQuestionId String
+  optionText     String
+  isCorrect      Boolean  @default(false)
+  displayOrder   Int      @default(0)
+  feedbackSpeech String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  testQuestion TestQuestion @relation(fields: [testQuestionId], references: [id], onDelete: Cascade)
+
+  @@map("question_options")
+}
+
+// ==========================================
+// USER PROGRESS & REFLEX TRACKING
+// ==========================================
+
+model UserLessonProgress {
+  id          String    @id @default(cuid())
+  userId      String
+  lessonId    String
+  status      String    @default("LOCKED") // LOCKED | UNLOCKED | IN_PROGRESS | COMPLETED
+  score       Int       @default(0)
+  stars       Int       @default(0) // 1 to 3 stars
+  isCompleted Boolean   @default(false)
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@map("user_lesson_progress")
+}
+
+model TestResult {
+  id               String   @id @default(cuid())
+  requestHash      String?
+  responseJson     String?
+  contentVersion   String?
+  contentSnapshot  String?
+  userId           String
+  checkpointId     String
+  totalQuestions   Int
+  correctCount     Int
+  wrongCount       Int
+  score            Int      // Calculated percentage (0-100)
+  isPassed         Boolean
+  timeTakenSeconds Int
+  feedbackEmotion  String   @default("CHEERING") // IDLE | THINKING | CHEERING | DANGER_ALERT
+  feedbackSpeech   String
+  badgeAwarded     String?
+  createdAt        DateTime @default(now())
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  checkpoint  Checkpoint   @relation(fields: [checkpointId], references: [id], onDelete: Cascade)
+  mistakeLogs MistakeLog[]
+
+  @@index([userId, checkpointId, isPassed])
+  @@map("test_results")
+}
+
+model LessonReward {
+  id        String @id @default(cuid())
+  userId    String
+  lessonId  String
+  xp        Int
+  createdAt DateTime @default(now())
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson    Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  @@unique([userId, lessonId])
+  @@map("lesson_rewards")
+}
+
+model MistakeLog {
+  id               String   @id @default(cuid())
+  testResultId     String
+  userId           String
+  questionId       String
+  selectedOptionId String?
+  userInputOrder   String?  // JSON stringified order if DRAG_DROP_ORDER
+  responseTimeMs   Int
+  miloGuidance     String
+  createdAt        DateTime @default(now())
+
+  testResult TestResult   @relation(fields: [testResultId], references: [id], onDelete: Cascade)
+  user       User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question   TestQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@map("mistake_logs")
+}
+
+// ==========================================
+// BADGES & SHARDS COLLECTION
+// ==========================================
+
+model Badge {
+  id                  String   @id @default(cuid())
+  zoneId              String
+  name                String
+  code                String   @unique
+  description         String
+  iconUrl             String
+  requiredShardsCount Int      @default(3)
+  createdAt           DateTime @default(now())
+
+  zone       Zone        @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+  userBadges UserBadge[]
+
+  @@map("badges")
+}
+
+model UserBadge {
+  id              String    @id @default(cuid())
+  userId          String
+  badgeId         String
+  collectedShards Int       @default(0)
+  isUnlocked      Boolean   @default(false)
+  unlockedAt      DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge Badge @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeId])
+  @@map("user_badges")
+}

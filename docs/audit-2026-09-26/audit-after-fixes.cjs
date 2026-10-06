@@ -1,0 +1,73 @@
+// Reproducible audit probes, not product acceptance tests. Synthetic data only.
+const fs=require('node:fs');
+const path=require('node:path');
+const {spawnSync}=require('node:child_process');
+const {randomUUID,createHash}=require('node:crypto');
+const Module=require('node:module');
+const root=path.resolve(__dirname,'../..');
+process.chdir(root);
+require('ts-node/register/transpile-only');
+const originalLoad=Module._load;
+const storage=new Map();
+Module._load=function(name,...args){
+  if(name==='react-native')return {Platform:{OS:'web'}};
+  if(name==='@react-native-async-storage/async-storage')return {__esModule:true,default:{getItem:async k=>storage.get(k)??null,setItem:async(k,v)=>storage.set(k,v)}};
+  return originalLoad.call(this,name,...args);
+};
+const {PrismaClient}=require('@prisma/client');
+const {LearningService}=require(path.join(root,'src/modules/learning/learning.service'));
+const api=require(path.join(root,'mobile/src/services/api'));
+const queue=require(path.join(root,'mobile/src/services/attemptQueue'));
+let db;
+(async()=>{
+  fs.mkdirSync(path.join(root,'scratch'),{recursive:true});
+  const dir=fs.mkdtempSync(path.join(root,'scratch/audit-after-'));
+  const file=path.join(dir,'probe.db');fs.writeFileSync(file,'');
+  const url='file:'+file.replaceAll('\\','/');
+  const setup=spawnSync(process.execPath,[require.resolve('prisma/build/index.js'),'db','push','--skip-generate'],{cwd:root,env:{...process.env,DATABASE_URL:url},encoding:'utf8'});
+  if(setup.status!==0)throw Error(setup.stdout+setup.stderr);
+  db=new PrismaClient({datasources:{db:{url}}});
+  const service=new LearningService(db);
+  const user=await db.user.create({data:{nickname:'Synthetic audit'}});
+  const zone=await db.zone.create({data:{zoneNumber:1,title:'Synthetic',description:'Audit only',iconName:'test'}});
+  const stage=await db.stage.create({data:{zoneId:zone.id,stageNumber:1,title:'Synthetic',description:'Audit only'}});
+  const lesson=await db.lesson.create({data:{stageId:stage.id,lessonNumber:1,title:'Two checkpoints',description:'Audit only',contentJson:'{}'}});
+  async function checkpoint(lessonId,n){
+    const cp=await db.checkpoint.create({data:{lessonId,checkpointNumber:n,title:'Synthetic checkpoint',description:'Audit only'}});
+    const q=await db.testQuestion.create({data:{checkpointId:cp.id,questionNumber:1,promptText:'Synthetic',explanation:'Synthetic'}});
+    const right=await db.questionOption.create({data:{testQuestionId:q.id,optionText:'Right',isCorrect:true,displayOrder:1}});
+    const wrong=await db.questionOption.create({data:{testQuestionId:q.id,optionText:'Wrong',isCorrect:false,displayOrder:0}});
+    return {cp,q,right,wrong};
+  }
+  const first=await checkpoint(lesson.id,1);const second=await checkpoint(lesson.id,2);
+  const payload=c=>({attemptId:randomUUID(),userId:user.id,answers:[{questionId:c.q.id,selectedOptionId:c.right.id,responseTimeMs:1}],totalTimeTakenSeconds:1});
+  const results={generatedAt:new Date().toISOString(),scope:'synthetic DB; services directly; storage/network mocked; not public HTTP exploitation',probes:{}};
+  await service.submitCheckpointTest(user.id,first.cp.id,payload(first));
+  const progress=await db.userLessonProgress.findUnique({where:{userId_lessonId:{userId:user.id,lessonId:lesson.id}}});
+  results.probes.multiCheckpoint={totalCheckpoints:2,submittedCheckpoints:1,lessonCompleted:progress.isCompleted,secondHasResults:await db.testResult.count({where:{checkpointId:second.cp.id}})};
+  const lockedLesson=await db.lesson.create({data:{stageId:stage.id,lessonNumber:2,title:'Locked',description:'Audit only',contentJson:'{}'}});
+  await db.userLessonProgress.create({data:{userId:user.id,lessonId:lockedLesson.id,status:'LOCKED'}});
+  const locked=await checkpoint(lockedLesson.id,1);
+  const beforeMap=await service.getJourneyMap(user.id);
+  const detail=await service.getCheckpointDetails(locked.cp.id,user.id);
+  const accepted=await service.submitCheckpointTest(user.id,locked.cp.id,payload(locked));
+  results.probes.lockedLesson={mapStatus:beforeMap.zones[0].stages[0].lessons[1].status,detailsReturned:!!detail.id,submissionAccepted:accepted.isPassed};
+  const viewed=await service.getCheckpointDetails(second.cp.id,user.id);
+  await db.questionOption.update({where:{id:second.right.id},data:{isCorrect:false}});
+  await db.questionOption.update({where:{id:second.wrong.id},data:{isCorrect:true}});
+  const changed=await service.submitCheckpointTest(user.id,second.cp.id,payload(second));
+  results.probes.contentChangedDuringAttempt={versionReturned:Object.hasOwn(viewed,'version'),samePreviouslyCorrectAnswerScore:changed.score};
+  const a={attemptId:randomUUID(),checkpointId:'deleted',userId:'queue-audit',answers:[],totalTimeTakenSeconds:1};
+  const b={...a,attemptId:randomUUID(),checkpointId:'valid'};
+  await queue.savePending(a);await queue.savePending(b);
+  const sent=[];api.apiClient.defaults.adapter=async config=>{sent.push(config.url);if(config.url.includes('/deleted/')){const e=Error('Synthetic 404');e.response={status:404};throw e;}return {status:200,data:{success:true,data:{testResultId:b.attemptId}},headers:{},config};};
+  let queueError;try{await queue.syncPending(a.userId);}catch(e){queueError=e.message;}
+  results.probes.poisonQueue={error:queueError,requests:sent,remaining:(await queue.readPending(a.userId)).length,validAttemptSent:sent.some(x=>x.includes('/valid/'))};
+  const fresh=path.join(dir,'migration.db');fs.writeFileSync(fresh,'');
+  const migration=spawnSync(process.execPath,[require.resolve('prisma/build/index.js'),'migrate','deploy'],{cwd:root,env:{...process.env,DATABASE_URL:'file:'+fresh.replaceAll('\\','/')},encoding:'utf8'});
+  results.probes.freshMigration={exitCode:migration.status,missingTestResults:/no such table: test_results/.test(migration.stdout+migration.stderr),output:(migration.stdout+migration.stderr).replaceAll(root,'<WORKSPACE>')};
+  const files=['src/modules/learning/learning.service.ts','mobile/src/services/attemptQueue.ts','mobile/src/screens/WorldMapScreen.tsx','mobile/src/screens/QuestTestScreen.tsx','src/common/guards/release.guard.ts','prisma/schema.prisma'];
+  results.sourceHashes=Object.fromEntries(files.map(f=>[f,createHash('sha256').update(fs.readFileSync(f)).digest('hex')]));
+  fs.writeFileSync(path.join(__dirname,'audit-after-fixes-results.json'),JSON.stringify(results,null,2));
+  console.log(JSON.stringify(results.probes,null,2));
+})().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{if(db)await db.$disconnect();Module._load=originalLoad;});

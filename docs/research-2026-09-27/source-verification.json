@@ -1,0 +1,66 @@
+{
+  "createdAt": "2026-09-27T08:49:15.5487529+07:00",
+  "scope": "Research and curriculum integration",
+  "files": [
+    {
+      "path": "content/milo-12/lessons.json",
+      "sha256": "5E05623EAAD388AA98B7C150CD0D01797C0C2F57ADAC39726EE596C45F1A558D"
+    },
+    {
+      "path": "content/milo-12/sources.json",
+      "sha256": "C51D4E833EE09C38CA3B778E5B41576FEAD31394AA3E40AE169F54AE97C39D61"
+    },
+    {
+      "path": "src/modules/learning/lesson-guide.ts",
+      "sha256": "D6DC6DC3930D123DB1B6F88CE2DFB72F92E1B4320A7979BA081F42E8FB7ED85B"
+    },
+    {
+      "path": "src/modules/learning/learning.service.ts",
+      "sha256": "E52BBF803FC076F44B09A8F699369FF81B7BE4F1C510E3E907EF0A3295EAD8EF"
+    },
+    {
+      "path": "mobile/src/components/LessonGuide.tsx",
+      "sha256": "DF67F03DD17864CF25168F847A941E1E987B739BAF96997EDA7DD827CB21F306"
+    },
+    {
+      "path": "mobile/src/screens/LearningFlow.tsx",
+      "sha256": "C9B7A16FE41A0700529A9C03A451FB3DF801C1EE2D419225C65DF07726E0982F"
+    },
+    {
+      "path": "mobile/src/types/curriculum.ts",
+      "sha256": "B13D4108F8662F19728F5F2875E9A561C88609025F915E36BC52E4154B5960FC"
+    },
+    {
+      "path": "scripts/curriculum-lib.cjs",
+      "sha256": "3E273A16C7023170DC89C1DD22699163E93EE5C20DA9C9ACA07727EC00FD7EE0"
+    },
+    {
+      "path": "scripts/create-curriculum-preview.cjs",
+      "sha256": "B69818692D399060CBFA264165CF4DDC880203E3628A4F47692D6C9A0E57CD6A"
+    },
+    {
+      "path": "scripts/create-review-packet.cjs",
+      "sha256": "65C5DFB665EF182FAD577A60FF088D08A887C445179343905602EE3AA3FC397B"
+    },
+    {
+      "path": "scripts/start-preview.cjs",
+      "sha256": "160BAD3F2F7390530B29E9A3DF9E38B5CF92E769FAE4F8B3C368569FEAEB06D5"
+    },
+    {
+      "path": "scripts/run-browser-checks.cjs",
+      "sha256": "98B9AEDB607DD8FEF5AF9853631E7ECFC0D7D616A76C8040B3F1D493DD150255"
+    },
+    {
+      "path": "test/curriculum.test.cjs",
+      "sha256": "329CFDA53B35A5CFD7B2782E77AC7EDDA596081652C2FEF37DAC52C7EB94B2BC"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4D5F4D7ED43634EE33264F4060A03273013AF22678116EB40D367A671FE32173"
+    },
+    {
+      "path": ".github/workflows/internal-checks.yml",
+      "sha256": "63D5A2A5A15D93CEE68797173A22C4A0DE70408C05A5E6FCCD1BAF02D29BC833"
+    }
+  ]
+}

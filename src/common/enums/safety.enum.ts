@@ -1,0 +1,35 @@
+export enum LessonType {
+  STORY_INTERACTIVE = 'STORY_INTERACTIVE',
+  PRACTICE = 'PRACTICE',
+}
+
+export enum QuestionType {
+  SINGLE_CHOICE = 'SINGLE_CHOICE',
+  TIMED_REFLEX = 'TIMED_REFLEX',
+  DRAG_DROP_ORDER = 'DRAG_DROP_ORDER',
+}
+
+export enum HazardLevel {
+  SAFE = 'SAFE',
+  CAUTION = 'CAUTION',
+  CRITICAL_EMERGENCY = 'CRITICAL_EMERGENCY',
+}
+
+export enum MiloEmotion {
+  IDLE = 'IDLE',
+  THINKING = 'THINKING',
+  CHEERING = 'CHEERING',
+  DANGER_ALERT = 'DANGER_ALERT',
+}
+
+export enum ProgressStatus {
+  LOCKED = 'LOCKED',
+  UNLOCKED = 'UNLOCKED',
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED',
+}
+
+export enum AgeGroup {
+  EARLY_EXPLORER = 'EARLY_EXPLORER', // 5 - 7 tuổi
+  ADVANCED_SCOUT = 'ADVANCED_SCOUT', // 8 - 12 tuổi
+}

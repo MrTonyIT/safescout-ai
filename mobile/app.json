@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "KidsSafe AI - Đội Trưởng Milo",
+    "slug": "kidssafe-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F7F4"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kidssafe.explorer"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F5F7F4"
+      },
+      "package": "com.kidssafe.explorer"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

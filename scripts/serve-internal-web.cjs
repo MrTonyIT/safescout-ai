@@ -1,0 +1,4 @@
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(process.argv[2]||'scratch/third-stage-web-verified');
+if(!root.startsWith(path.resolve('scratch')+path.sep))throw Error('Only generated scratch previews may be served.');
+http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(file!==root&&!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}const target=file===root?path.join(root,'index.html'):file;fs.readFile(target,(e,data)=>{if(e){res.writeHead(404);res.end();return;}res.setHeader('Cache-Control','no-store');res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.png':'image/png','.ico':'image/x-icon','.json':'application/json','.wav':'audio/wav','.svg':'image/svg+xml'})[path.extname(target)]||'application/octet-stream');res.end(data);});}).listen(8081,'127.0.0.1');

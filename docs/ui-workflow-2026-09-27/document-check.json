@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-27T02:22:39.192Z",
+  "findings": 26,
+  "tickets": 18,
+  "acceptanceChecks": 16,
+  "missingLocalLinks": [],
+  "applicationCodeChanged": false,
+  "scope": "Documentation, source review and local browser observation only; no native performance or child usability claim"
+}

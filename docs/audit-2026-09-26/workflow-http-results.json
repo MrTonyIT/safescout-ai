@@ -1,0 +1,69 @@
+[
+  {
+    "method": "GET",
+    "url": "/learning/journey-map?userId=synthetic",
+    "expected": 503,
+    "actual": 503,
+    "body": {
+      "success": false,
+      "statusCode": 503,
+      "message": "Luồng học hiện chỉ dành cho môi trường thử nghiệm nội bộ.",
+      "errorDetails": {
+        "message": "Luồng học hiện chỉ dành cho môi trường thử nghiệm nội bộ.",
+        "error": "Service Unavailable",
+        "statusCode": 503
+      },
+      "timestamp": "2026-09-26T11:40:04.027Z"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "/parent/verify-pin",
+    "expected": 503,
+    "actual": 503,
+    "body": {
+      "success": false,
+      "statusCode": 503,
+      "message": "Tính năng đang đóng để hoàn thiện xác thực và kiểm định.",
+      "errorDetails": {
+        "message": "Tính năng đang đóng để hoàn thiện xác thực và kiểm định.",
+        "error": "Service Unavailable",
+        "statusCode": 503
+      },
+      "timestamp": "2026-09-26T11:40:04.244Z"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "/ai/chat",
+    "expected": 503,
+    "actual": 503,
+    "body": {
+      "success": false,
+      "statusCode": 503,
+      "message": "Tính năng đang đóng để hoàn thiện xác thực và kiểm định.",
+      "errorDetails": {
+        "message": "Tính năng đang đóng để hoàn thiện xác thực và kiểm định.",
+        "error": "Service Unavailable",
+        "statusCode": 503
+      },
+      "timestamp": "2026-09-26T11:40:04.259Z"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "/ai/health",
+    "expected": 200,
+    "actual": 200,
+    "body": {
+      "success": true,
+      "message": "AI chưa được mở để sử dụng.",
+      "data": {
+        "status": "DISABLED",
+        "engine": "AI is not enabled for this internal preview",
+        "version": "1.0.0"
+      },
+      "timestamp": "2026-09-26T11:40:04.274Z"
+    }
+  }
+]

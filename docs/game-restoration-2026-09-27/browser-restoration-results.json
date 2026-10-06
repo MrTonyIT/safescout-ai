@@ -1,0 +1,348 @@
+{
+  "passed": true,
+  "scope": "Synthetic local curriculum; desktop Edge emulation 320/390. Media API playback observed, not a human listening test. No native device or child testing.",
+  "before": {
+    "xp": 0,
+    "badges": 0,
+    "completed": 0,
+    "lessons": 12
+  },
+  "after": {
+    "xp": 0,
+    "badges": 0,
+    "completed": 0,
+    "lessons": 12
+  },
+  "collectionSummary": {
+    "XP đã ghi nhận": "0\nXP đã ghi nhận",
+    "Dấu mốc hiện tại": "0/12\nDấu mốc hiện tại",
+    "Huy hiệu đã nhận": "0\nHuy hiệu đã nhận"
+  },
+  "lockedLabel": "Viên nhỏ trên bàn. Chưa mở. Xem chi tiết",
+  "motion": {
+    "normal": [
+      "matrix(1, 0, 0, 1, 0.084717, 0)",
+      "matrix(1, 0, 0, 1, 1.41989, 0)",
+      "matrix(1, 0, 0, 1, 4.33588, 0)"
+    ],
+    "reduced": [
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)"
+    ],
+    "reloadedReduced": [
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)"
+    ]
+  },
+  "audio": {
+    "beforeEnable": {
+      "calls": 0,
+      "resolved": 0,
+      "rejected": 0,
+      "pauses": 0,
+      "events": [],
+      "active": 0,
+      "elements": []
+    },
+    "firstPlay": {
+      "calls": 1,
+      "resolved": 1,
+      "rejected": 0,
+      "pauses": 3,
+      "events": [
+        {
+          "name": "timeupdate",
+          "time": 4661.79999999702,
+          "currentTime": 0,
+          "paused": false
+        },
+        {
+          "name": "playing",
+          "time": 4661.79999999702,
+          "currentTime": 0,
+          "paused": false
+        }
+      ],
+      "active": 1,
+      "elements": [
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 4,
+          "duration": 0.1
+        },
+        {
+          "paused": false,
+          "ended": false,
+          "currentTime": 0.010261,
+          "readyState": 4,
+          "duration": 0.24
+        },
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 4,
+          "duration": 0.510023
+        }
+      ]
+    },
+    "reloadBeforeGesture": {
+      "calls": 0,
+      "resolved": 0,
+      "rejected": 0,
+      "pauses": 3,
+      "events": [],
+      "active": 0,
+      "elements": [
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 1,
+          "duration": 0.1
+        },
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 4,
+          "duration": 0.24
+        },
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 1,
+          "duration": 0.510023
+        }
+      ]
+    },
+    "reloadEnabled": {
+      "calls": 0,
+      "resolved": 0,
+      "rejected": 0,
+      "pauses": 3,
+      "events": [],
+      "active": 0,
+      "elements": [
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 4,
+          "duration": 0.1
+        },
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 4,
+          "duration": 0.24
+        },
+        {
+          "paused": true,
+          "ended": false,
+          "currentTime": 0,
+          "readyState": 4,
+          "duration": 0.510023
+        }
+      ]
+    },
+    "muteWhilePlaying": {
+      "before": {
+        "calls": 1,
+        "resolved": 0,
+        "rejected": 0,
+        "pauses": 3,
+        "events": [],
+        "active": 1,
+        "elements": [
+          {
+            "paused": true,
+            "ended": false,
+            "currentTime": 0,
+            "readyState": 4,
+            "duration": 0.1
+          },
+          {
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "readyState": 1,
+            "duration": 0.24
+          },
+          {
+            "paused": true,
+            "ended": false,
+            "currentTime": 0,
+            "readyState": 4,
+            "duration": 0.510023
+          }
+        ]
+      },
+      "after": {
+        "calls": 1,
+        "resolved": 0,
+        "rejected": 1,
+        "pauses": 9,
+        "events": [
+          {
+            "name": "play-rejected",
+            "message": "AbortError: The play() request was interrupted by a call to pause()."
+          }
+        ],
+        "active": 0,
+        "elements": [
+          {
+            "paused": true,
+            "ended": false,
+            "currentTime": 0,
+            "readyState": 0,
+            "duration": null
+          },
+          {
+            "paused": true,
+            "ended": false,
+            "currentTime": 0,
+            "readyState": 0,
+            "duration": null
+          },
+          {
+            "paused": true,
+            "ended": false,
+            "currentTime": 0,
+            "readyState": 0,
+            "duration": null
+          }
+        ]
+      }
+    },
+    "reloadedMuted": {
+      "calls": 0,
+      "resolved": 0,
+      "rejected": 0,
+      "pauses": 0,
+      "events": [],
+      "active": 0,
+      "elements": []
+    },
+    "afterMutedArcade": {
+      "calls": 0,
+      "resolved": 0,
+      "rejected": 0,
+      "pauses": 0,
+      "events": [],
+      "active": 0,
+      "elements": []
+    }
+  },
+  "maze": {
+    "path": [
+      "arcade-cell-0-0",
+      "arcade-cell-1-0",
+      "arcade-cell-2-0",
+      "arcade-cell-3-0",
+      "arcade-cell-3-1",
+      "arcade-cell-3-2",
+      "arcade-cell-2-2",
+      "arcade-cell-1-2",
+      "arcade-cell-1-3",
+      "arcade-cell-1-4",
+      "arcade-cell-2-4",
+      "arcade-cell-3-4",
+      "arcade-cell-4-4"
+    ],
+    "finalCell": "arcade-cell-4-4"
+  },
+  "screenshots": [
+    {
+      "name": "restored-map-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "restored-map-320",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "restored-collection-320",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\nMỖI CHẶNG · MỘT DẤU MỐC\nBa lô khám phá\nNHẬT KÝ HÀNH TRÌNH\nNhững điều con đã khám phá\nCủa Người lớn kiểm tra bài nháp\n0\nXP đã ghi nhận\n0/12\nDấu mốc hiện tại\n0\nHuy hiệu đã nhận\nDấu mốc\nHuy hiệu\nSổ dấu mốc\nHoàn thành một bài để ghi dấu tại đây.\nChưa có dấu mốc hoàn thành. Chặng đầu tiên đang chờ con trên bản đồ.\nAn toàn tại nhà\nCốc nước vừa rót\nSẵn sàng khám phá\nViên nhỏ trên bàn\nChưa mở\nBật lửa cạnh ghế\nChưa mở\nĐã ra điểm hẹn\nChưa mở\nTìm người lớn trợ giúp\nAi có thể giúp mình?\nChưa mở\nĐổi chỗ đón\nChưa mở\nKhông thấy người đi cùng\nChưa mở\nMình vẫn có thể nói tiếp\nChưa mở\nRanh giới cơ thể\nChào theo cách mình chọn\nChưa mở\nCon được hỏi về việc chăm sóc\nChưa mở\nChuyện làm mình lo\nChưa mở\nĐó không phải lỗi của con\nChưa mở\nDấu mốc dựa trên bài đang khả dụng. Khi nội dung đổi phiên bản, bài có thể cần học lại; XP đã ghi nhận vẫn được giữ.\nXP, dấu mốc và huy hiệu ghi nhận hành trình học tập; không phải chứng nhận năng lực cứu hộ.\nBản nội bộ dùng hồ sơ mẫu; nội dung đang chờ người có chuyên môn duyệt.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô"
+    },
+    {
+      "name": "restored-collection-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\nMỖI CHẶNG · MỘT DẤU MỐC\nBa lô khám phá\nNHẬT KÝ HÀNH TRÌNH\nNhững điều con đã khám phá\nCủa Người lớn kiểm tra bài nháp\n0\nXP đã ghi nhận\n0/12\nDấu mốc hiện tại\n0\nHuy hiệu đã nhận\nDấu mốc\nHuy hiệu\nSổ dấu mốc\nHoàn thành một bài để ghi dấu tại đây.\nChưa có dấu mốc hoàn thành. Chặng đầu tiên đang chờ con trên bản đồ.\nAn toàn tại nhà\nCốc nước vừa rót\nSẵn sàng khám phá\nViên nhỏ trên bàn\nChưa mở\nBật lửa cạnh ghế\nChưa mở\nĐã ra điểm hẹn\nChưa mở\nTìm người lớn trợ giúp\nAi có thể giúp mình?\nChưa mở\nĐổi chỗ đón\nChưa mở\nKhông thấy người đi cùng\nChưa mở\nMình vẫn có thể nói tiếp\nChưa mở\nRanh giới cơ thể\nChào theo cách mình chọn\nChưa mở\nCon được hỏi về việc chăm sóc\nChưa mở\nChuyện làm mình lo\nChưa mở\nĐó không phải lỗi của con\nChưa mở\nDấu mốc dựa trên bài đang khả dụng. Khi nội dung đổi phiên bản, bài có thể cần học lại; XP đã ghi nhận vẫn được giữ.\nXP, dấu mốc và huy hiệu ghi nhận hành trình học tập; không phải chứng nhận năng lực cứu hộ.\nBản nội bộ dùng hồ sơ mẫu; nội dung đang chờ người có chuyên môn duyệt.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô"
+    },
+    {
+      "name": "restored-collection-locked-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\nMỖI CHẶNG · MỘT DẤU MỐC\nBa lô khám phá\nNHẬT KÝ HÀNH TRÌNH\nNhững điều con đã khám phá\nCủa Người lớn kiểm tra bài nháp\n0\nXP đã ghi nhận\n0/12\nDấu mốc hiện tại\n0\nHuy hiệu đã nhận\nDấu mốc\nHuy hiệu\nSổ dấu mốc\nHoàn thành một bài để ghi dấu tại đây.\nChưa có dấu mốc hoàn thành. Chặng đầu tiên đang chờ con trên bản đồ.\nAn toàn tại nhà\nCốc nước vừa rót\nSẵn sàng khám phá\nViên nhỏ trên bàn\nChưa mở\nDẤU MỐC ĐANG XEM\nViên nhỏ trên bàn\nKhông tự dùng thuốc hoặc vật giống kẹo không rõ nguồn.\n0/1 phần đạt trong phiên bản hiện tại.\nHoàn thành chặng trước trên bản đồ để mở bài này.\nTiếp tục khám phá\nĐóng chi tiết dấu mốc\nBật lửa cạnh ghế\nChưa mở\nĐã ra điểm hẹn\nChưa mở\nTìm người lớn trợ giúp\nAi có thể giúp mình?\nChưa mở\nĐổi chỗ đón\nChưa mở\nKhông thấy người đi cùng\nChưa mở\nMình vẫn có thể nói tiếp\nChưa mở\nRanh giới cơ thể\nChào theo cách mình chọn\nChưa mở\nCon được hỏi về việc chăm sóc\nChưa mở\nChuyện làm mình lo\nChưa mở\nĐó không phải lỗi của con\nChưa mở\nDấu mốc dựa trên bài đang khả dụng. Khi nội dung đổi phiên bản, bài có thể cần học lại; XP đã ghi nhận vẫn được giữ.\nXP, dấu mốc và huy hiệu ghi nhận hành trình học tập; không phải chứng nhận năng lực cứu hộ.\nBản nội bộ dùng hồ sơ mẫu; nội dung đang chờ người có chuyên môn duyệt.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô"
+    },
+    {
+      "name": "restored-badges-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\nMỖI CHẶNG · MỘT DẤU MỐC\nBa lô khám phá\nNHẬT KÝ HÀNH TRÌNH\nNhững điều con đã khám phá\nCủa Người lớn kiểm tra bài nháp\n0\nXP đã ghi nhận\n0/12\nDấu mốc hiện tại\n0\nHuy hiệu đã nhận\nDấu mốc\nHuy hiệu\nHuy hiệu học tập\nMảnh và huy hiệu được lưu theo hồ sơ của con.\nChưa có huy hiệu để trưng bày\nNhững bài đang mở chưa cung cấp chi tiết huy hiệu. Con vẫn có thể ghi dấu mốc khi hoàn thành bài.\nXP, dấu mốc và huy hiệu ghi nhận hành trình học tập; không phải chứng nhận năng lực cứu hộ.\nBản nội bộ dùng hồ sơ mẫu; nội dung đang chờ người có chuyên môn duyệt.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô"
+    },
+    {
+      "name": "restored-settings-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nTắt âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nTùy chọn trải nghiệm\nTheo nhịp của bạn\nĐóng\nTùy chọn trên thiết bị này. Việc học không phụ thuộc âm thanh hay chuyển động.\nGiảm chuyển động\nGiữ Milo và cảnh ở trạng thái tĩnh để dễ tập trung.\nÂm thanh hiệu ứng\nÂm nhẹ khi thao tác; tách riêng với giọng đọc.\nRung nhẹ\nRung nhẹ dành cho bản iOS và Android.\nThử âm thanh\nÂm ngắn khi chạm và hoàn thành. Không có nhạc tự phát. Thiết bị ở chế độ im lặng có thể không phát âm."
+    },
+    {
+      "name": "restored-settings-320",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nTắt âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nTùy chọn trải nghiệm\nTheo nhịp của bạn\nĐóng\nTùy chọn trên thiết bị này. Việc học không phụ thuộc âm thanh hay chuyển động.\nGiảm chuyển động\nGiữ Milo và cảnh ở trạng thái tĩnh để dễ tập trung.\nÂm thanh hiệu ứng\nÂm nhẹ khi thao tác; tách riêng với giọng đọc.\nRung nhẹ\nRung nhẹ dành cho bản iOS và Android.\nThử âm thanh\nÂm ngắn khi chạm và hoàn thành. Không có nhạc tự phát. Thiết bị ở chế độ im lặng có thể không phát âm."
+    },
+    {
+      "name": "restored-arcade-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nSân chơi\nSÂN CHƠI QUAN SÁT\nĐường về trại\nKhông tính XP bài học. Đi từng ô đường để tìm chiếc lều; không cần chạy đua với thời gian.\n1/3 · Lối qua vườn cây\nCon\nTrại\nCây\nTìm đường tới chiếc lều. Mỗi lần đi một ô cạnh nhau.\nChạm ô đường bên cạnh, dùng các nút mũi tên hoặc phím mũi tên trên bàn phím.\n0 bước đã đi\nĐi lại"
+    },
+    {
+      "name": "restored-arcade-320",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nSân chơi\nSÂN CHƠI QUAN SÁT\nĐường về trại\nKhông tính XP bài học. Đi từng ô đường để tìm chiếc lều; không cần chạy đua với thời gian.\n1/3 · Lối qua vườn cây\nCon\nTrại\nCây\nTìm đường tới chiếc lều. Mỗi lần đi một ô cạnh nhau.\nChạm ô đường bên cạnh, dùng các nút mũi tên hoặc phím mũi tên trên bàn phím.\n0 bước đã đi\nĐi lại"
+    },
+    {
+      "name": "restored-arcade-win-320",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nSân chơi\nSÂN CHƠI QUAN SÁT\nĐường về trại\nKhông tính XP bài học. Đi từng ô đường để tìm chiếc lều; không cần chạy đua với thời gian.\n1/3 · Lối qua vườn cây\nCon\nTrại\nCây\nCon đã tìm được đường tới trại!\nKhám phá đường tiếp theo\n12 bước đã đi\nĐi lại"
+    },
+    {
+      "name": "restored-arcade-win-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nSân chơi\nSÂN CHƠI QUAN SÁT\nĐường về trại\nKhông tính XP bài học. Đi từng ô đường để tìm chiếc lều; không cần chạy đua với thời gian.\n1/3 · Lối qua vườn cây\nCon\nTrại\nCây\nCon đã tìm được đường tới trại!\nKhám phá đường tiếp theo\n12 bước đã đi\nĐi lại"
+    }
+  ],
+  "runtimeErrors": []
+}

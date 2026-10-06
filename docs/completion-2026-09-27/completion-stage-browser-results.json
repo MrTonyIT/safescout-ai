@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "scope": "synthetic web release build, no real child data",
+  "metrics": [
+    {
+      "name": "completion-welcome-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC VIỆN THÁM HIỂM\nCùng Milo bước vào hành trình khám phá\nCùng Milo đọc tình huống, chọn cách xử lý và tìm hiểu lời giải.\nBản thử nội bộ dành cho người xây dựng sản phẩm. Nội dung chưa được chuyên gia duyệt để dùng với trẻ.\nBản này cần mạng để tải và chấm bài. Không có tính năng cứu hộ hoặc tự xác nhận môi trường an toàn.\nVào bản học thử"
+    },
+    {
+      "name": "completion-home-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Quan sát hình và màu\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nChủ đề thử 1\n0/1 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nQuan sát hình và màu\n0/2 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "completion-home-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Quan sát hình và màu\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nChủ đề thử 1\n0/1 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nQuan sát hình và màu\n0/2 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "completion-home-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Quan sát hình và màu\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nChủ đề thử 1\n0/1 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nQuan sát hình và màu\n0/2 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "completion-home-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Quan sát hình và màu\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nChủ đề thử 1\n0/1 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nQuan sát hình và màu\n0/2 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "completion-lesson-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n1 / 1\nNHIỆM VỤ KHÁM PHÁ\nQuan sát hình và màu\nLỰA CHỌN 1\nGiọng đọc\nTrong các lựa chọn dưới đây, đâu là hình tròn?\nA\nHình vuông\nB\nHình tròn\nXác nhận lựa chọn\nChưa biết — xem lời giải\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "completion-offline-pending",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n1 / 1\nNHIỆM VỤ KHÁM PHÁ\nQuan sát hình và màu\nChưa kết nối được hoặc chưa đọc được dữ liệu. Hãy thử lại. Bài làm đã lưu trên thiết bị, chưa có điểm được xác nhận.\nLỰA CHỌN 1\nGiọng đọc\nTrong các lựa chọn dưới đây, đâu là hình tròn?\nA\nHình vuông\nĐang chọn\nB\nHình tròn\nVì sao?\nHình tròn không có góc. Đây chỉ là câu hỏi kiểm thử phần mềm.\nGửi bài và xem kết quả\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "completion-result-zero",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\nĐã lưu\nDẤU MỐC MỚI\nQuan sát hình và màu\nHÀNH TRÌNH CỦA CON\n0%\nMình cùng hiểu thêm nhé\nĐúng 0/1 câu. Kết quả đã lưu.\nMình cùng xem lại lời giải nhé. Con có thể học lại khi sẵn sàng.\nĐã lưu kết quả phần học trên máy chủ.\nVề trang Học để tiếp tục\nXem lại các lựa chọn\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "completion-two-parts-complete",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n40 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Bài tiếp theo\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 02\nChủ đề thử 2\n0/1 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nBài tiếp theo\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n40 XP học tập · 0 huy hiệu · 50% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "completion-home-text200-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n40 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Bài tiếp theo\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 02\nChủ đề thử 2\n0/1 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nBài tiếp theo\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n40 XP học tập · 0 huy hiệu · 50% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    }
+  ],
+  "keyboardFocus": {
+    "role": "button",
+    "label": "Mở tìm kiếm bài"
+  },
+  "runtimeErrors": []
+}

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-26T12:15:53.114Z",
+  "scope": "synthetic DB; services directly; storage/network mocked; not public HTTP exploitation",
+  "probes": {
+    "multiCheckpoint": {
+      "totalCheckpoints": 2,
+      "submittedCheckpoints": 1,
+      "lessonCompleted": true,
+      "secondHasResults": 0
+    },
+    "lockedLesson": {
+      "mapStatus": "LOCKED",
+      "detailsReturned": true,
+      "submissionAccepted": true
+    },
+    "contentChangedDuringAttempt": {
+      "versionReturned": false,
+      "samePreviouslyCorrectAnswerScore": 0
+    },
+    "poisonQueue": {
+      "error": "Synthetic 404",
+      "requests": [
+        "/learning/checkpoints/deleted/submit"
+      ],
+      "remaining": 2,
+      "validAttemptSent": false
+    },
+    "freshMigration": {
+      "exitCode": 1,
+      "missingTestResults": true,
+      "output": "Environment variables loaded from .env\nPrisma schema loaded from prisma\\schema.prisma\nDatasource \"db\": SQLite database \"migration.db\" at \"file:D:/kidproject/scratch/audit-after-YDRp6U/migration.db\"\n\n1 migration found in prisma/migrations\n\nApplying migration `20260926_attempt_receipts`\nError: P3018\n\nA migration failed to apply. New migrations cannot be applied before the error is recovered from. Read more about how to resolve migration issues in a production database: https://pris.ly/d/migrate-resolve\n\nMigration name: 20260926_attempt_receipts\n\nDatabase error code: 1\n\nDatabase error:\nno such table: test_results\n\n\n"
+    }
+  },
+  "sourceHashes": {
+    "src/modules/learning/learning.service.ts": "48ab1d0ce368934dd46607bc20c3b31270c34258540f2103d3f41d39bcba9099",
+    "mobile/src/services/attemptQueue.ts": "1dfe0e393956a3d736d257cadb1bb9f1fa8ac8e59b98d65de2990942a737ff0d",
+    "mobile/src/screens/WorldMapScreen.tsx": "0759772c6b2cadefcc2ecd05f93535856e82705c2a7068aa9dabe1bb6bbac6af",
+    "mobile/src/screens/QuestTestScreen.tsx": "86f0588720fe1a4b7622dceb851d91dbd6f6729e0b3db27fa4e7d01a0b439334",
+    "src/common/guards/release.guard.ts": "0c78527755c01265d21b6c5dcc77c57d6d819abaafda073edcd8b29b284d997f",
+    "prisma/schema.prisma": "550312125665ddc5931a9d8b73c8ba708150be3d2f145d109478f375f2318347"
+  }
+}

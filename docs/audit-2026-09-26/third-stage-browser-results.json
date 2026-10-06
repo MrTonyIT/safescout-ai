@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "scope": "synthetic web release build, no real child data",
+  "metrics": [
+    {
+      "name": "third-welcome-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nMỗi bài học, một điều để cùng thực hành\nCùng Milo đọc tình huống, chọn cách xử lý và tìm hiểu lời giải.\nBản thử nội bộ dành cho người xây dựng sản phẩm. Nội dung chưa được chuyên gia duyệt để dùng với trẻ.\nBản này cần mạng để tải và chấm bài. Không có tính năng cứu hộ hoặc tự xác nhận môi trường an toàn.\nVào bản học thử"
+    },
+    {
+      "name": "third-home-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nHôm nay mình học gì?\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\nTiếp tục: Quan sát hình và màu\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nChủ đề thử 1\nQuan sát hình và màu\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nSẵn sàng học · 0/2 phần đã đạt\nHọc phần 1\nHọc phần 2\nChủ đề thử 2\nHoàn thành các bài trước để mở chủ đề này.\nBài tiếp theo\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nChưa mở · 0/1 phần đã đạt\nHọc phần 1\nXP không xác nhận năng lực cứu hộ. Tài khoản gia đình, camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "third-home-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nHôm nay mình học gì?\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\nTiếp tục: Quan sát hình và màu\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nChủ đề thử 1\nQuan sát hình và màu\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nSẵn sàng học · 0/2 phần đã đạt\nHọc phần 1\nHọc phần 2\nChủ đề thử 2\nHoàn thành các bài trước để mở chủ đề này.\nBài tiếp theo\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nChưa mở · 0/1 phần đã đạt\nHọc phần 1\nXP không xác nhận năng lực cứu hộ. Tài khoản gia đình, camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "third-home-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nHôm nay mình học gì?\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\nTiếp tục: Quan sát hình và màu\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nChủ đề thử 1\nQuan sát hình và màu\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nSẵn sàng học · 0/2 phần đã đạt\nHọc phần 1\nHọc phần 2\nChủ đề thử 2\nHoàn thành các bài trước để mở chủ đề này.\nBài tiếp theo\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nChưa mở · 0/1 phần đã đạt\nHọc phần 1\nXP không xác nhận năng lực cứu hộ. Tài khoản gia đình, camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "third-home-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nHôm nay mình học gì?\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\nTiếp tục: Quan sát hình và màu\nTải lại danh sách bài\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nChủ đề thử 1\nQuan sát hình và màu\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nSẵn sàng học · 0/2 phần đã đạt\nHọc phần 1\nHọc phần 2\nChủ đề thử 2\nHoàn thành các bài trước để mở chủ đề này.\nBài tiếp theo\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nChưa mở · 0/1 phần đã đạt\nHọc phần 1\nXP không xác nhận năng lực cứu hộ. Tài khoản gia đình, camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "third-lesson-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nQuan sát hình và màu\nVề danh sách bài\nCâu 1/1 · Không tính giờ giới hạn\nTrong các lựa chọn dưới đây, đâu là hình tròn?\nBật đọc khi bấm Nghe\nHình vuông\nHình tròn\nXác nhận lựa chọn\nChưa biết — xem lời giải"
+    },
+    {
+      "name": "third-result-zero",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nQuan sát hình và màu\nVề danh sách bài\nMình cùng xem lại nhé\n0%\nĐúng 0/1 câu. Kết quả đã lưu.\nMình cùng xem lại lời giải nhé. Con có thể học lại khi sẵn sàng.\nTrong các lựa chọn dưới đây, đâu là hình tròn?\nHình tròn không có góc. Đây chỉ là câu hỏi kiểm thử phần mềm.\nVề trang Học để tiếp tục"
+    },
+    {
+      "name": "third-two-parts-complete",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nHôm nay mình học gì?\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\nTiếp tục: Bài tiếp theo\nTải lại danh sách bài\n40 XP học tập · 0 huy hiệu · 50% số bài hoàn thành\nChủ đề thử 1\nQuan sát hình và màu\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nĐã hoàn thành · 2/2 phần đã đạt\nÔn lại phần 1\nÔn lại phần 2\nChủ đề thử 2\nBài tiếp theo\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nSẵn sàng học · 0/1 phần đã đạt\nHọc phần 1\nXP không xác nhận năng lực cứu hộ. Tài khoản gia đình, camera AI và SOS chưa được mở."
+    },
+    {
+      "name": "third-home-text200-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO · HỌC CÙNG CHA MẸ\nHôm nay mình học gì?\nBản nội bộ · Nội dung đang chờ duyệt · Không nhập dữ liệu trẻ thật.\nTiếp tục: Bài tiếp theo\nTải lại danh sách bài\n40 XP học tập · 0 huy hiệu · 50% số bài hoàn thành\nChủ đề thử 1\nQuan sát hình và màu\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nĐã hoàn thành · 2/2 phần đã đạt\nÔn lại phần 1\nÔn lại phần 2\nChủ đề thử 2\nBài tiếp theo\nDữ liệu kiểm thử giao diện, không dùng để hướng dẫn an toàn cho trẻ.\nSẵn sàng học · 0/1 phần đã đạt\nHọc phần 1\nXP không xác nhận năng lực cứu hộ. Tài khoản gia đình, camera AI và SOS chưa được mở."
+    }
+  ],
+  "keyboardFocus": {
+    "role": "button",
+    "label": "Tiếp tục: Bài tiếp theo"
+  },
+  "runtimeErrors": []
+}

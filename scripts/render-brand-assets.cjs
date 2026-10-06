@@ -1,0 +1,8 @@
+// Rasterize the repository-owned SVG with the local browser; no remote image or service.
+const fs=require('node:fs'),path=require('node:path');
+(async()=>{const page=await(await fetch('http://127.0.0.1:9223/json/new?about:blank',{method:'PUT'})).json();const ws=new WebSocket(page.webSocketDebuggerUrl);await new Promise((r,j)=>{ws.onopen=r;ws.onerror=j;});let id=0;const pending=new Map();ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const t=pending.get(m.id);pending.delete(m.id);m.error?t.j(m.error):t.r(m.result);}};const send=(method,params={})=>new Promise((r,j)=>{pending.set(++id,{r,j});ws.send(JSON.stringify({id,method,params}));});
+ try{await send('Page.enable');const svg=fs.readFileSync('mobile/assets/milo-mark.svg','utf8');await send('Page.navigate',{url:'data:text/html;charset=utf-8,'+encodeURIComponent('<html><body style="margin:0;background:#F5F7F4">'+svg.replace('<svg ','<svg style="width:100vw;height:100vh" ')+'</body></html>')});await new Promise(r=>setTimeout(r,300));fs.mkdirSync('scratch/original-brand-placeholders',{recursive:true});
+ for(const [name,size]of[['icon',1024],['adaptive-icon',1024],['splash',1024],['favicon',64]]){const file=path.join('mobile/assets',name+'.png');const backup=path.join('scratch/original-brand-placeholders',name+'.png');if(!fs.existsSync(backup))fs.copyFileSync(file,backup);await send('Emulation.setDeviceMetricsOverride',{width:size,height:size,deviceScaleFactor:1,mobile:false});const shot=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync(file,Buffer.from(shot.data,'base64'));}
+ }finally{await send('Page.close').catch(()=>{});ws.close();}
+ console.log('Rendered app mark, splash and favicon from milo-mark.svg.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

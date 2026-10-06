@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "scope": "Desktop Edge emulation 320/390/768/1440; synthetic data; not native validation or a child pilot",
+  "aboveFold": {
+    "button": 250.27667236328125,
+    "node": 573.7766723632812,
+    "height": 844
+  },
+  "enlargedScoreBounds": {
+    "frame": {
+      "left": 59.453125,
+      "right": 260.546875,
+      "top": 493,
+      "bottom": 694.09375
+    },
+    "glyph": {
+      "left": 77.453125,
+      "right": 242.546875,
+      "top": 551.046875,
+      "bottom": 636.046875
+    },
+    "mascot": {
+      "left": 107.5,
+      "right": 212.5,
+      "top": 704.09375,
+      "bottom": 809.09375
+    }
+  },
+  "lockedSearch": "Chào theo cách mình chọnRanh giới cơ thể",
+  "modalKeyboardFocus": [
+    {
+      "label": "Học phần 1",
+      "inside": true
+    },
+    {
+      "label": "Đóng nhiệm vụ",
+      "inside": true
+    },
+    {
+      "label": "Học phần 1",
+      "inside": true
+    },
+    {
+      "label": "Đóng nhiệm vụ",
+      "inside": true
+    },
+    {
+      "label": "Học phần 1",
+      "inside": true
+    },
+    {
+      "label": "Đóng nhiệm vụ",
+      "inside": true
+    }
+  ],
+  "metrics": [
+    {
+      "name": "map-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "map-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "map-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "map-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "map-text200-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động"
+    },
+    {
+      "name": "locked-mission",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n4 bài tìm thấy\nChào theo cách mình chọn\nRanh giới cơ thể\nCon được hỏi về việc chăm sóc\nRanh giới cơ thể\nChuyện làm mình lo\nRanh giới cơ thể\nĐó không phải lỗi của con\nRanh giới cơ thể\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nHỒ SƠ NHIỆM VỤ\nChào theo cách mình chọn\nBiết có thể chọn cách chào không tiếp xúc cơ thể.\nKhoảng 5 phút · Có thể dừng và tiếp tục\nHọc phần 1\nHoàn thành chặng trước để mở nhiệm vụ này."
+    },
+    {
+      "name": "mission-sheet-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n0 XP\nMỘT NGÀY · MỘT KHÁM PHÁ\nLên đường cùng Milo\nBản nội bộ · Chờ duyệt nội dung\nTiếp tục: Cốc nước vừa rót\nBật âm thanh\nÔn tập\nCách chơi\nCHƯƠNG 01\nAn toàn tại nhà\n0/4 chặng hoàn thành\nChạm đảo để khám phá\nCHẶNG CỦA CON\n1\nCốc nước vừa rót\n0/1 phần đã đạt\nViên nhỏ trên bàn\n0/1 phần đã đạt\nBật lửa cạnh ghế\n0/1 phần đã đạt\nĐã ra điểm hẹn\n0/1 phần đã đạt\nTừng bước, cùng lớn lên\nRương hành trình\nXem dấu mốc và huy hiệu con đã đạt\n0 XP học tập · 0 huy hiệu · 0% số bài hoàn thành\nXP ghi nhận việc học, không xác nhận năng lực cứu hộ. Chỉ người lớn kiểm tra bản nội bộ; không nhập dữ liệu trẻ thật.\nMột chút khám phá. Một điều để cùng thực hành.\nBản đồ\nBa lô\nSân chơi\nÂm & chuyển động\nHỒ SƠ NHIỆM VỤ\nCốc nước vừa rót\nChọn cách tránh vật có thể gây bỏng.\nKhoảng 5 phút · Có thể dừng và tiếp tục\nHọc phần 1"
+    },
+    {
+      "name": "scene-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n1 / 2\nQUAN SÁT CÙNG MILO\nCốc nước vừa rót\nChạm dấu + để quan sát\nCốc\nSách\nNgười lớn\nCốc: Chiếc cốc đang bốc hơi trên bàn.\nChuyện gì đang xảy ra?\nAn thấy cốc nước bốc hơi cạnh quyển truyện. An muốn lấy truyện nhưng tay sẽ phải đưa qua cốc.\nSẵn sàng chọn\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "scene-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n1 / 2\nQUAN SÁT CÙNG MILO\nCốc nước vừa rót\nChạm dấu + để quan sát\nCốc\nSách\nNgười lớn\nCốc: Chiếc cốc đang bốc hơi trên bàn.\nChuyện gì đang xảy ra?\nAn thấy cốc nước bốc hơi cạnh quyển truyện. An muốn lấy truyện nhưng tay sẽ phải đưa qua cốc.\nSẵn sàng chọn\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "scene-text200-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n1 / 2\nQUAN SÁT CÙNG MILO\nCốc nước vừa rót\nChạm dấu + để quan sát\nCốc\nSách\nNgười lớn\nCốc: Chiếc cốc đang bốc hơi trên bàn.\nChuyện gì đang xảy ra?\nAn thấy cốc nước bốc hơi cạnh quyển truyện. An muốn lấy truyện nhưng tay sẽ phải đưa qua cốc.\nSẵn sàng chọn\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "choice-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\n1 / 2\nNHIỆM VỤ KHÁM PHÁ\nCốc nước vừa rót\nLỰA CHỌN 1\nGiọng đọc\nAn nên lấy truyện thế nào?\nA\nĐưa tay thật nhanh qua cốc.\nB\nNhờ người lớn chuyển cốc và lấy giúp.\nXác nhận lựa chọn\nChưa biết — xem lời giải\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "choice-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n1 / 2\nNHIỆM VỤ KHÁM PHÁ\nCốc nước vừa rót\nLỰA CHỌN 1\nGiọng đọc\nAn nên lấy truyện thế nào?\nA\nĐưa tay thật nhanh qua cốc.\nB\nNhờ người lớn chuyển cốc và lấy giúp.\nXác nhận lựa chọn\nChưa biết — xem lời giải\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "explanation-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\n1 / 2\nNHIỆM VỤ KHÁM PHÁ\nCốc nước vừa rót\nLỰA CHỌN 1\nGiọng đọc\nAn nên lấy truyện thế nào?\nA\nĐưa tay thật nhanh qua cốc.\nB\nNhờ người lớn chuyển cốc và lấy giúp.\nĐang chọn\nĐã chọn một hành động. Chưa xác nhận đáp án.\nVì sao?\nNhờ giúp tránh phải đưa tay gần cốc đang nóng.\nCâu tiếp theo\nĐã lưu bản nháp trên thiết bị.\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "result-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "MILO / EXPLORER\nĐã lưu\nDẤU MỐC MỚI\nCốc nước vừa rót\nHÀNH TRÌNH CỦA CON\n100%\nCon đã hoàn thành phần học này\nĐúng 2/2 câu. Kết quả đã lưu.\nCon đã trả lời đúng các câu trong bài này. Hãy cùng cha mẹ ôn lại điều vừa học nhé!\nĐã lưu kết quả phần học trên máy chủ.\nVề trang Học để tiếp tục\nXem lại các lựa chọn\nCùng cha mẹ thực hành\nXem nguồn dành cho người lớn\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "result-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\nĐã lưu\nDẤU MỐC MỚI\nCốc nước vừa rót\nHÀNH TRÌNH CỦA CON\n100%\nCon đã hoàn thành phần học này\nĐúng 2/2 câu. Kết quả đã lưu.\nCon đã trả lời đúng các câu trong bài này. Hãy cùng cha mẹ ôn lại điều vừa học nhé!\nĐã lưu kết quả phần học trên máy chủ.\nVề trang Học để tiếp tục\nXem lại các lựa chọn\nCùng cha mẹ thực hành\nXem nguồn dành cho người lớn\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "sources-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\nĐã lưu\nDẤU MỐC MỚI\nCốc nước vừa rót\nHÀNH TRÌNH CỦA CON\n100%\nCon đã hoàn thành phần học này\nĐúng 2/2 câu. Kết quả đã lưu.\nCon đã trả lời đúng các câu trong bài này. Hãy cùng cha mẹ ôn lại điều vừa học nhé!\nĐã lưu kết quả phần học trên máy chủ.\nVề trang Học để tiếp tục\nXem lại các lựa chọn\nCùng cha mẹ thực hành\nMột việc nhỏ sau bài học\nNgười lớn vẽ một chiếc cốc và quyển sách trên giấy. Cùng trẻ chỉ ra cách nhờ giúp. Không dùng nước nóng để diễn tập.\nKể lại theo cách của con\nNếu chưa biết cốc nóng hay nguội, con sẽ làm gì?\nKhông cần nhập chuyện riêng vào ứng dụng. Có thể dừng nếu không thoải mái.\nẨn nguồn dành cho người lớn\nNguồn tham khảo\nDẫn nguồn không có nghĩa tổ chức đó chứng nhận Milo. Thông tin dưới đây để người lớn đối chiếu; màn này không mở trang ngoài.\nU.S. Fire Administration\nFire safety for children\nhttps://www.usfa.fema.gov/prevention/home-fires/at-risk-audiences/children/\nAmerican Academy of Pediatrics / HealthyChildren\nBurns: Treatment and Prevention\nhttps://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Treating-and-Preventing-Burns.aspx\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    },
+    {
+      "name": "result-text200-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "text": "MILO / EXPLORER\nĐã lưu\nDẤU MỐC MỚI\nCốc nước vừa rót\nHÀNH TRÌNH CỦA CON\n100%\nCon đã hoàn thành phần học này\nĐúng 2/2 câu. Kết quả đã lưu.\nCon đã trả lời đúng các câu trong bài này. Hãy cùng cha mẹ ôn lại điều vừa học nhé!\nĐã lưu kết quả phần học trên máy chủ.\nVề trang Học để tiếp tục\nẨn lời giải\nAn nên lấy truyện thế nào?\nLựa chọn đúng · Bạn chọn: Nhờ người lớn chuyển cốc và lấy giúp.\nĐáp án: Nhờ người lớn chuyển cốc và lấy giúp.\nNhờ giúp tránh phải đưa tay gần cốc đang nóng.\nChưa biết chiếc cốc có nóng không, An nên làm gì?\nLựa chọn đúng · Bạn chọn: Đứng cách ra và hỏi người lớn.\nĐáp án: Đứng cách ra và hỏi người lớn.\nKhông cần chạm vào cốc để kiểm tra. Người lớn có thể giúp.\nCùng cha mẹ thực hành\nMột việc nhỏ sau bài học\nNgười lớn vẽ một chiếc cốc và quyển sách trên giấy. Cùng trẻ chỉ ra cách nhờ giúp. Không dùng nước nóng để diễn tập.\nKể lại theo cách của con\nNếu chưa biết cốc nóng hay nguội, con sẽ làm gì?\nKhông cần nhập chuyện riêng vào ứng dụng. Có thể dừng nếu không thoải mái.\nẨn nguồn dành cho người lớn\nNguồn tham khảo\nDẫn nguồn không có nghĩa tổ chức đó chứng nhận Milo. Thông tin dưới đây để người lớn đối chiếu; màn này không mở trang ngoài.\nU.S. Fire Administration\nFire safety for children\nhttps://www.usfa.fema.gov/prevention/home-fires/at-risk-audiences/children/\nAmerican Academy of Pediatrics / HealthyChildren\nBurns: Treatment and Prevention\nhttps://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Treating-and-Preventing-Burns.aspx\nBản thiết kế nội bộ · Nội dung và minh họa đang chờ chuyên gia duyệt.\nMột chút khám phá. Một điều để cùng thực hành."
+    }
+  ],
+  "runtimeErrors": []
+}

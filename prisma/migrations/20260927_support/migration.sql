@@ -1,0 +1,2 @@
+CREATE TABLE "family_feedback" ("id" TEXT NOT NULL PRIMARY KEY, "familyId" TEXT NOT NULL, "category" TEXT NOT NULL, "message" TEXT NOT NULL, "checkpointId" TEXT, "contentVersion" TEXT, "status" TEXT NOT NULL DEFAULT 'OPEN', "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY ("familyId") REFERENCES "families"("id") ON DELETE CASCADE ON UPDATE CASCADE);
+CREATE INDEX "family_feedback_status_createdAt_idx" ON "family_feedback"("status", "createdAt");

@@ -1,0 +1,69 @@
+{
+  "recordedAt": "2026-09-27T03:07:00.619Z",
+  "scope": "Local synthetic web prototype; not native/store certification",
+  "tests": {
+    "passed": 58,
+    "failed": 0
+  },
+  "browserChecks": true,
+  "webBundles": [
+    {
+      "path": "scratch/completion-web/_expo/static/js/web/index-7d957de849bc208d4e48614b6b35b3bf.js",
+      "sha256": "b4cc286a540761c4110926d02a5814bb432c0b35b05670a5c1c08ee5d9d5d2b1"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "mobile/src/screens/LearningFlow.tsx",
+      "sha256": "a5c28197915ca38ea64753a92fbf42684e70eccb448f9b89a5389a391bf46753"
+    },
+    {
+      "path": "mobile/src/components/game/GameKit.tsx",
+      "sha256": "7bdaf9d13b308e8b3bde4b8351aefbe52e8e0b256cc94aed80ff8465a97ba8ec"
+    },
+    {
+      "path": "mobile/src/components/game/JourneyMap.tsx",
+      "sha256": "3e4324932af3978b3108387779d31cdf4b6bb161cac6746261d68340b4d04d5b"
+    },
+    {
+      "path": "mobile/src/components/game/LessonScene.tsx",
+      "sha256": "fa6ea661dfdcb38be165e422c1265a397d6d9a64ae9f96fb96c2057759799b1c"
+    },
+    {
+      "path": "mobile/src/components/game/ResultSummary.tsx",
+      "sha256": "37068b157db962c96075daacb9f10616e1a4914ace43ef14ed9c688ca8b68e54"
+    },
+    {
+      "path": "mobile/src/components/game/MiloCompanion.tsx",
+      "sha256": "434855288cc9053b09ce9de6915e0580ea605facc9438fd08857071376a3e505"
+    },
+    {
+      "path": "mobile/src/components/game/ExperienceSettings.tsx",
+      "sha256": "2c4f76755928eb7a8e244cf05af8c3007096b5cd76e496784888ca472ad43306"
+    },
+    {
+      "path": "mobile/src/services/experiencePreferences.ts",
+      "sha256": "54f0af47fd511fc86e3b21cf993ceea7375f91cd71b34127f2be75102684aba1"
+    },
+    {
+      "path": "mobile/src/types/curriculum.ts",
+      "sha256": "7237d30c05b02db9d3a6f1f29378c6d61985cf54a9c003655d0a2438ab034842"
+    },
+    {
+      "path": "src/modules/learning/lesson-guide.ts",
+      "sha256": "e06c6d7a97dad073ef963bc3a565b980a64cc040fadec2012e1763facb43e383"
+    },
+    {
+      "path": "scripts/curriculum-lib.cjs",
+      "sha256": "75654e5003ddbbd7f9ea774e29dc778410461041db84e66e3161451d451bd087"
+    },
+    {
+      "path": "test/curriculum.test.cjs",
+      "sha256": "5f916921340fdd98e01a36ee507c4c4a5999f6a2c6e942bc3579de5d5a77ccd5"
+    },
+    {
+      "path": "test/experience.test.cjs",
+      "sha256": "5e5335b6f47ae086c3f0de060869e82193a8c65cdfcae87d321f060f2bc1eb1c"
+    }
+  ]
+}

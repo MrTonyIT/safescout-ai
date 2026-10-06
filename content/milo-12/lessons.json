@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-09-27-draft-1",
+  "status": "DRAFT",
+  "humanReviewed": false,
+  "reviewer": null,
+  "ageMin": 7,
+  "ageMax": 10,
+  "notice": "Bản soạn có AI hỗ trợ, dành cho người lớn kiểm tra. Chưa dùng để hướng dẫn trẻ trước khi chuyên gia duyệt và thử khả năng hiểu. Không phải quy trình cấp cứu.",
+  "topics": ["An toàn tại nhà", "Tìm người lớn trợ giúp", "Ranh giới cơ thể"],
+  "lessons": [
+    {
+      "id":"H01","topic":0,"title":"Cốc nước vừa rót","objective":"Chọn cách tránh vật có thể gây bỏng.",
+      "story":"An thấy cốc nước bốc hơi cạnh quyển truyện. An muốn lấy truyện nhưng tay sẽ phải đưa qua cốc.",
+      "keyPoints":["Dừng lại và nhờ người lớn lấy giúp khi đồ vật ở gần vật nóng."],
+      "activity":"Người lớn vẽ một chiếc cốc và quyển sách trên giấy. Cùng trẻ chỉ ra cách nhờ giúp. Không dùng nước nóng để diễn tập.",
+      "teachBack":"Nếu chưa biết cốc nóng hay nguội, con sẽ làm gì?",
+      "sourceIds":["usfa-children","aap-burns"],
+      "reviewFocus":"Chỉ phòng tránh; không dạy trẻ thử nhiệt hoặc điều trị bỏng.",
+      "questions":[
+        {"prompt":"An nên lấy truyện thế nào?","options":["Đưa tay thật nhanh qua cốc.","Nhờ người lớn chuyển cốc và lấy giúp."],"correct":1,"explanation":"Nhờ giúp tránh phải đưa tay gần cốc đang nóng."},
+        {"prompt":"Chưa biết chiếc cốc có nóng không, An nên làm gì?","options":["Đứng cách ra và hỏi người lớn.","Chạm tay vào để thử."],"correct":0,"explanation":"Không cần chạm vào cốc để kiểm tra. Người lớn có thể giúp."}
+      ]
+    },
+    {
+      "id":"H02","topic":0,"title":"Viên nhỏ trên bàn","objective":"Không tự dùng thuốc hoặc vật giống kẹo không rõ nguồn.",
+      "story":"Bình thấy một viên màu hồng cạnh hộp thuốc. Bạn rủ Bình nếm thử vì trông giống kẹo.",
+      "keyPoints":["Không nếm vật lạ. Thuốc do người lớn phụ trách cho dùng đúng chỉ dẫn."],
+      "activity":"Dùng tranh vẽ, cùng nói câu nhờ người lớn kiểm tra. Người lớn kiểm tra lại nơi cất thuốc ngoài tầm với của trẻ; không dùng thuốc thật để chơi.",
+      "teachBack":"Màu sắc có giúp mình biết một viên là kẹo không?",
+      "sourceIds":["medicines"],
+      "reviewFocus":"Không đưa liều dùng, số chống độc nước ngoài hay cách tự xử trí ngộ độc.",
+      "questions":[
+        {"prompt":"Bình nên chọn cách nào?","options":["Nếm một chút để biết.","Không nếm và báo người lớn."],"correct":1,"explanation":"Hình dáng giống kẹo không cho biết đó là gì."},
+        {"prompt":"Bạn đưa viên thuốc của mình cho Bình. Bình nên làm gì?","options":["Không tự uống; hỏi người lớn phụ trách.","Uống vì bạn đã dùng được."],"correct":0,"explanation":"Thuốc của người khác không phải hướng dẫn dùng thuốc cho mình."}
+      ]
+    },
+    {
+      "id":"H03","topic":0,"title":"Bật lửa cạnh ghế","objective":"Báo người lớn khi thấy dụng cụ tạo lửa.",
+      "story":"Chi nhìn thấy bật lửa ở cạnh ghế. Em nhỏ đang chơi ở phía bên kia phòng.",
+      "keyPoints":["Không nghịch bật lửa hoặc diêm; nhờ người lớn cất chúng."],
+      "activity":"Chỉ dùng hình vẽ bật lửa để tập câu báo tin. Người lớn tự kiểm tra và cất dụng cụ tạo lửa; không giao trẻ đi tìm đồ thật.",
+      "teachBack":"Con có cần thử bật lửa trước khi báo không?",
+      "sourceIds":["usfa-children"],
+      "reviewFocus":"Không tạo lửa thật hoặc giao trẻ vận chuyển bật lửa.",
+      "questions":[
+        {"prompt":"Chi nên làm gì?","options":["Bấm thử xem có hoạt động không.","Không chạm vào và gọi người lớn cất giúp."],"correct":1,"explanation":"Người lớn xử lý dụng cụ tạo lửa; trẻ không cần thử."},
+        {"prompt":"Trong buổi thực hành, gia đình nên dùng gì?","options":["Hình vẽ bật lửa.","Bật lửa thật để bật thử."],"correct":0,"explanation":"Có thể tập cách báo tin bằng tranh, không cần tạo nguy hiểm thật."}
+      ]
+    },
+    {
+      "id":"H04","topic":0,"title":"Đã ra điểm hẹn","objective":"Không quay vào nơi đang cháy để lấy đồ.",
+      "story":"Dung đã cùng người lớn ra điểm hẹn bên ngoài khi nhà có cháy. Dung nhớ con gấu bông vẫn ở trong nhà.",
+      "keyPoints":["Khi đã ra ngoài, không quay vào đám cháy lấy đồ; ở cùng người lớn tại điểm hẹn."],
+      "activity":"Người lớn chọn điểm hẹn phù hợp với phương án của nơi ở. Chỉ trao đổi hoặc vẽ trên giấy; không tạo khói, lửa hoặc chặn lối đi.",
+      "teachBack":"Nếu nhớ một món đồ ở trong, con sẽ nói với ai?",
+      "sourceIds":["usfa-children"],
+      "reviewFocus":"Tình huống chỉ bắt đầu khi đã ở ngoài. Lối thoát chung cư, khói và chữa cháy cần chuyên gia PCCC duyệt riêng.",
+      "questions":[
+        {"prompt":"Dung nên làm gì với chuyện gấu bông?","options":["Chạy vào lấy thật nhanh.","Ở ngoài cùng người lớn và nói mình đang lo."],"correct":1,"explanation":"Không quay vào nơi đang cháy để lấy đồ."},
+        {"prompt":"Dung được rủ quay vào tìm đồ cùng bạn. Cách nào phù hợp?","options":["Không quay vào; báo người lớn ở điểm hẹn.","Đi cùng bạn thì có thể quay vào."],"correct":0,"explanation":"Đi cùng bạn không làm nơi đang cháy trở nên an toàn."}
+      ]
+    },
+    {
+      "id":"T01","topic":1,"title":"Ai có thể giúp mình?","objective":"Nhận biết nhiều người lớn có thể tìm đến khi cần trợ giúp.",
+      "story":"Giang chưa hiểu một việc khiến mình lo. Cô giáo đang ở sân trường, còn người chăm sóc sẽ đến đón sau giờ học.",
+      "keyPoints":["Có thể tìm người lớn biết lắng nghe và giúp đỡ; không phải tự giải quyết mọi chuyện."],
+      "activity":"Cha mẹ cùng trẻ nghĩ đến người hỗ trợ ở nhà và ở trường. Có thể vẽ trên giấy giữ riêng; không nhập tên, số điện thoại hoặc chuyện riêng vào Milo.",
+      "teachBack":"Nếu người con định hỏi đang bận, còn ai có thể giúp?",
+      "sourceIds":["kidsmartz","nz-help"],
+      "reviewFocus":"Không mặc định cha mẹ luôn là người an toàn duy nhất. Tránh thu danh bạ hoặc tiết lộ của trẻ.",
+      "questions":[
+        {"prompt":"Giang đang lo và cần được giúp. Có thể làm gì?","options":["Tìm cô giáo để nói mình cần giúp.","Giữ kín vì phải tự giải quyết."],"correct":0,"explanation":"Giang có thể tìm người lớn hỗ trợ ngay khi cần."},
+        {"prompt":"Người Giang định hỏi không có ở đó. Giang có thể làm gì?","options":["Tìm người lớn hỗ trợ khác.","Không được hỏi thêm ai."],"correct":0,"explanation":"Có thể tìm nhiều người hỗ trợ, không chỉ một người."}
+      ]
+    },
+    {
+      "id":"T02","topic":1,"title":"Đổi chỗ đón","objective":"Kiểm tra với người đang phụ trách trước khi đổi kế hoạch đi lại.",
+      "story":"Hà đang chờ ở khu vực đón học sinh. Một người quen bảo Hà đi ra con đường khác để chờ xe.",
+      "keyPoints":["Trước khi đổi chỗ hoặc đi theo ai, kiểm tra với người lớn đang phụ trách mình."],
+      "activity":"Đóng vai bằng lời một lần đổi chỗ đón. Thống nhất đầu mối của trường và gia đình; không thử bằng cách đưa trẻ đi mà không báo trước.",
+      "teachBack":"Nếu người rủ đi là người quen, mình có cần kiểm tra không?",
+      "sourceIds":["going-out"],
+      "reviewFocus":"Phù hợp quy trình đón trả thực tế; không xem quen biết là đủ xác nhận.",
+      "questions":[
+        {"prompt":"Hà nên làm gì trước?","options":["Đi ngay vì đã gặp người ấy.","Hỏi người lớn phụ trách khu vực đón trước khi đổi chỗ."],"correct":1,"explanation":"Kiểm tra kế hoạch với người phụ trách trước khi rời chỗ."},
+        {"prompt":"Bạn cùng lớp cũng rủ đi ra chỗ khác. Hà nên làm gì?","options":["Vẫn kiểm tra trước khi thay đổi kế hoạch.","Có bạn đi cùng thì không cần báo."],"correct":0,"explanation":"Có bạn đi cùng không thay thế việc kiểm tra với người phụ trách."}
+      ]
+    },
+    {
+      "id":"T03","topic":1,"title":"Không thấy người đi cùng","objective":"Tìm trợ giúp ở nơi công cộng khi bị tách khỏi người chăm sóc.",
+      "story":"Ở cửa hàng, Khoa không nhìn thấy bà. Gần đó có quầy đang mở và nhân viên đang làm việc.",
+      "keyPoints":["Nhờ nhân viên tại quầy công khai hỗ trợ liên lạc; không tự đi ra chỗ vắng cùng người rủ dẫn đi."],
+      "activity":"Người lớn trao đổi cách nhờ trợ giúp tại nơi gia đình thường đến. Không cố tình bỏ trẻ lại để kiểm tra phản ứng.",
+      "teachBack":"Con có thể nói câu gì ở quầy để nhờ tìm người đi cùng?",
+      "sourceIds":["kidsmartz"],
+      "reviewFocus":"Bối cảnh cửa hàng có quầy hoạt động; không khẳng định đồng phục bảo đảm an toàn hoặc áp dụng nguyên xi ở mọi nơi.",
+      "questions":[
+        {"prompt":"Khoa nên chọn cách nào?","options":["Nhờ nhân viên tại quầy hỗ trợ tìm bà.","Tự chạy ra bãi xe để tìm."],"correct":0,"explanation":"Quầy đang hoạt động là nơi có thể nhờ hỗ trợ mà không tự đi tìm ở ngoài."},
+        {"prompt":"Một người rủ Khoa ra ngõ vắng tìm bà. Khoa nên làm gì?","options":["Đi theo vì người đó tươi cười.","Không đi ra ngõ; tiếp tục nhờ hỗ trợ tại quầy."],"correct":1,"explanation":"Vẻ thân thiện không xác nhận lời rủ đi là phù hợp."}
+      ]
+    },
+    {
+      "id":"T04","topic":1,"title":"Mình vẫn có thể nói tiếp","objective":"Tiếp tục tìm hỗ trợ khi lần đầu chưa được lắng nghe.",
+      "story":"Lan nói với một người lớn rằng có chuyện làm mình sợ. Người đó đang bận và chưa nghe hết.",
+      "keyPoints":["Nếu chưa được giúp, có thể nói lại hoặc tìm người lớn khác. Việc tìm giúp đỡ không phải làm phiền."],
+      "activity":"Tập câu: Con có chuyện cần được giúp, cô/chú có thể nghe con không? Không bắt trẻ kể chuyện thật. Cho trẻ dừng nếu không muốn tiếp tục.",
+      "teachBack":"Chưa được nghe lần đầu có nghĩa là con phải giữ im lặng không?",
+      "sourceIds":["nz-help"],
+      "reviewFocus":"Không hứa người lớn đầu tiên luôn tin hoặc giải quyết được; chuẩn bị đầu mối hỗ trợ cho phụ huynh.",
+      "questions":[
+        {"prompt":"Lan chưa được giúp. Cách nào phù hợp?","options":["Nói lại hoặc tìm người lớn khác biết hỗ trợ.","Không bao giờ nhắc đến nữa."],"correct":0,"explanation":"Lan vẫn có quyền tìm người lắng nghe và giúp đỡ."},
+        {"prompt":"Một người lớn bảo Lan đừng hỏi nữa. Lan còn được tìm hỗ trợ không?","options":["Không, chỉ được hỏi một lần.","Có, Lan có thể tìm người lớn khác."],"correct":1,"explanation":"Một lần bị gạt đi không làm mất quyền được giúp đỡ."}
+      ]
+    },
+    {
+      "id":"B01","topic":2,"title":"Chào theo cách mình chọn","objective":"Biết có thể chọn cách chào không tiếp xúc cơ thể.",
+      "story":"Minh gặp một người họ hàng muốn ôm. Hôm nay Minh chỉ muốn vẫy tay chào.",
+      "keyPoints":["Có thể chọn vẫy tay hoặc nói lời chào; người lớn cần tôn trọng lựa chọn đó."],
+      "activity":"Cùng chọn vài cách chào bằng lời hoặc cử chỉ. Mọi người tự chọn, không ép ôm để hoàn thành bài.",
+      "teachBack":"Con muốn chào theo cách nào hôm nay?",
+      "sourceIds":["boundaries"],
+      "reviewFocus":"Không gắn lịch sự với bắt buộc ôm; không đổ lỗi nếu trẻ chưa nói được ý mình.",
+      "questions":[
+        {"prompt":"Minh có thể làm gì?","options":["Nói muốn vẫy tay chào.","Phải ôm dù không muốn."],"correct":0,"explanation":"Có nhiều cách chào, không cần ép tiếp xúc cơ thể."},
+        {"prompt":"Bạn của Minh không muốn ôm. Minh nên làm gì?","options":["Tôn trọng và chào bằng lời.","Kéo bạn lại ôm cho vui."],"correct":0,"explanation":"Mình cũng tôn trọng lựa chọn của người khác."}
+      ]
+    },
+    {
+      "id":"B02","topic":2,"title":"Con được hỏi về việc chăm sóc","objective":"Biết nói khó chịu và hỏi lý do khi được chăm sóc cơ thể.",
+      "story":"Ngọc cùng người chăm sóc đến khám bệnh. Ngọc chưa hiểu bác sĩ định kiểm tra điều gì và muốn được giải thích.",
+      "keyPoints":["Phần cơ thể dưới đồ lót là riêng tư. Khi cần chăm sóc hoặc khám bệnh, trẻ cần được giải thích phù hợp; trẻ có thể hỏi và nói khi khó chịu."],
+      "activity":"Dùng búp bê mặc quần áo hoặc chỉ nói chuyện về một lần khám thông thường. Không yêu cầu cởi đồ, chạm vùng riêng tư hoặc gửi hình ảnh.",
+      "teachBack":"Nếu chưa hiểu việc khám, con có thể hỏi câu gì?",
+      "sourceIds":["pants-faq"],
+      "reviewFocus":"Chuyên gia y tế và bảo vệ trẻ duyệt cách nói về chăm sóc, quyền của trẻ và ngoại lệ cấp cứu; không thay thế quy trình đồng ý khám.",
+      "questions":[
+        {"prompt":"Ngọc chưa hiểu việc khám. Ngọc có thể làm gì?","options":["Hỏi bác sĩ và người chăm sóc giải thích.","Không được hỏi người lớn."],"correct":0,"explanation":"Ngọc có thể hỏi để hiểu việc chăm sóc cơ thể mình."},
+        {"prompt":"Ngọc thấy khó chịu trong lúc được khám. Cách nào phù hợp?","options":["Phải giấu cảm giác của mình.","Nói cho bác sĩ và người chăm sóc biết."],"correct":1,"explanation":"Nói khó chịu giúp người chăm sóc hiểu điều Ngọc đang trải qua."}
+      ]
+    },
+    {
+      "id":"B03","topic":2,"title":"Chuyện làm mình lo","objective":"Không giữ kín chuyện gây lo chỉ vì bị yêu cầu hứa.",
+      "story":"Phúc được dặn giữ một chuyện làm mình lo và bị bảo rằng sẽ gặp rắc rối nếu nói ra. Phúc muốn tìm người giúp.",
+      "keyPoints":["Chuyện khiến mình sợ hoặc bị đe dọa có thể nói với người lớn hỗ trợ, kể cả khi đã hứa giữ kín."],
+      "activity":"So sánh bằng lời chuyện giấu tấm thiệp đến ngày tặng với chuyện kèm đe dọa. Không yêu cầu trẻ kể bí mật thật; nói rõ trẻ có thể dừng.",
+      "teachBack":"Đã hứa rồi, con còn được nói chuyện khiến con lo không?",
+      "sourceIds":["secrets"],
+      "reviewFocus":"Không dùng phân loại bí mật để thẩm vấn trẻ; bất ngờ vui cũng không kèm ép buộc hoặc phạt vì kể.",
+      "questions":[
+        {"prompt":"Phúc có thể làm gì?","options":["Tìm người lớn hỗ trợ và nói điều khiến mình lo.","Phải giữ kín vì đã bị yêu cầu."],"correct":0,"explanation":"Lời yêu cầu giữ kín không ngăn Phúc tìm giúp đỡ."},
+        {"prompt":"Phúc đã lỡ hứa không kể. Phúc còn được nhờ giúp không?","options":["Không, phải giữ lời dù rất sợ.","Có, vẫn được tìm người hỗ trợ."],"correct":1,"explanation":"Phúc được nhờ giúp dù trước đó đã hứa giữ kín."}
+      ]
+    },
+    {
+      "id":"B04","topic":2,"title":"Đó không phải lỗi của con","objective":"Biết mình không có lỗi khi bị người khác gây hại và có thể tìm hỗ trợ.",
+      "story":"Quỳnh nghe một bạn nói đã bị người khác làm điều khiến bạn sợ. Lúc đó bạn không nói được gì và giờ tự trách mình.",
+      "keyPoints":["Bị gây hại không phải lỗi của trẻ, kể cả khi trẻ không nói được hoặc chưa kể ngay. Trách nhiệm bảo vệ thuộc về người lớn."],
+      "activity":"Người lớn tập đáp lời bình tĩnh: Cảm ơn con đã nói; đó không phải lỗi của con; mình sẽ tìm hỗ trợ. Không đóng vai gây hại hoặc yêu cầu kể chi tiết.",
+      "teachBack":"Một bạn chưa nói được lúc sợ có phải là người có lỗi không?",
+      "sourceIds":["pants"],
+      "reviewFocus":"Người duyệt chuẩn bị quy trình tiếp nhận tiết lộ, không hứa giữ bí mật tuyệt đối hoặc điều tra trong ứng dụng.",
+      "questions":[
+        {"prompt":"Quỳnh nên nói điều gì với bạn?","options":["Bạn có lỗi vì đã im lặng.","Đó không phải lỗi của bạn; mình có thể nhờ người lớn hỗ trợ."],"correct":1,"explanation":"Không nói được khi sợ không làm trẻ có lỗi."},
+        {"prompt":"Bạn chưa kể ngay lúc xảy ra chuyện. Bây giờ bạn còn được giúp không?","options":["Có, vẫn có thể tìm người lớn hỗ trợ.","Không, đã quá muộn để nói."],"correct":0,"explanation":"Trẻ vẫn có quyền tìm hỗ trợ khi sẵn sàng nói."}
+      ]
+    }
+  ]
+}

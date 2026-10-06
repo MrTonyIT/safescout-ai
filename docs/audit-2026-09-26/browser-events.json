@@ -1,0 +1,162 @@
+[
+  {
+    "method": "Log.entryAdded",
+    "params": {
+      "entry": {
+        "source": "rendering",
+        "level": "error",
+        "text": "Error: <path> attribute d: Unexpected end of attribute. Expected number, \"M 2\".",
+        "timestamp": 1790425084526.682,
+        "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+        "lineNumber": 30,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "k",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 3230
+            },
+            {
+              "functionName": "si",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 87889
+            },
+            {
+              "functionName": "Us",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 111473
+            },
+            {
+              "functionName": "Is",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 111213
+            },
+            {
+              "functionName": "Ds",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 111080
+            },
+            {
+              "functionName": "Rs",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 110943
+            },
+            {
+              "functionName": "ws",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 106101
+            },
+            {
+              "functionName": "k",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 54,
+              "columnNumber": 1375
+            },
+            {
+              "functionName": "M",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 54,
+              "columnNumber": 1910
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "method": "Log.entryAdded",
+    "params": {
+      "entry": {
+        "source": "rendering",
+        "level": "error",
+        "text": "Error: <path> attribute d: Unexpected end of attribute. Expected number, \"M 2\".",
+        "timestamp": 1790425084531.142,
+        "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+        "lineNumber": 30,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "k",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 3230
+            },
+            {
+              "functionName": "si",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 87889
+            },
+            {
+              "functionName": "Us",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 111473
+            },
+            {
+              "functionName": "Is",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 111213
+            },
+            {
+              "functionName": "Ds",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 111080
+            },
+            {
+              "functionName": "Rs",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 110943
+            },
+            {
+              "functionName": "ws",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 30,
+              "columnNumber": 106101
+            },
+            {
+              "functionName": "k",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 54,
+              "columnNumber": 1375
+            },
+            {
+              "functionName": "M",
+              "scriptId": "3",
+              "url": "http://localhost:8081/_expo/static/js/web/index-90680c73547559964864728337c52aac.js",
+              "lineNumber": 54,
+              "columnNumber": 1910
+            }
+          ]
+        }
+      }
+    }
+  }
+]

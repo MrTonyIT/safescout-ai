@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+mobile/node_modules/
+
+# Build artifacts & outputs
+dist/
+mobile/dist/
+web-build/
+mobile/web-build/
+*.tsbuildinfo
+
+# Environment configurations and secrets
+.env
+.env.*
+.env.local
+!.env.example
+
+# Local databases and SQLite files
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+# Expo and Metro bundler caches
+.expo/
+mobile/.expo/
+
+# Scratch files, test runs and coverage
+scratch/
+coverage/
+
+# OS and Editor temporary files
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary backups and recovery snapshots
+*.milobak
+*recovery*.json
