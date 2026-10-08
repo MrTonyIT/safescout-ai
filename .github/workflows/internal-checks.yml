@@ -13,12 +13,12 @@ jobs:
             package-lock.json
             mobile/package-lock.json
       - run: npm ci
+      - run: npm ci
+        working-directory: mobile
       - run: npm run prisma:generate
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
-      - run: npm ci
-        working-directory: mobile
       - run: npx tsc --noEmit
         working-directory: mobile
       - run: npx expo export --platform web --output-dir ../scratch/ci-web

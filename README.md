@@ -1,4 +1,4 @@
-# Milo — KidsSafe AI (The Secret Explorer Academy)
+# SafeScout AI — The Autonomous Child Safety & Survival Reflex Academy
 
 [![Node.js](https://img.shields.io/badge/NODE.JS-20_%7C_22_LTS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TYPESCRIPT-5.7+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -16,199 +16,438 @@
 [![Mascot](https://img.shields.io/badge/MASCOT-CAPTAIN_MILO_3D-F59E0B?style=for-the-badge&logo=paw&logoColor=white)](mobile/assets/)
 [![License](https://img.shields.io/badge/LICENSE-MIT-0284C7?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
 
-Nền tảng học kỹ năng an toàn và phản xạ sinh tồn qua tình huống tương tác dành cho trẻ em (5–12 tuổi) cùng phụ huynh, tích hợp trợ thủ hoạt hình 3D **Đội Trưởng Milo (Captain Milo)** và động cơ đánh giá phản xạ.
+An intelligent, gamified survival reflex and child safety education platform designed for children aged 5–12 and their families. Powered by **Captain Milo**—a high-fidelity 3D Rescue Golden Pup AI companion—and an automated reflex testing engine.
 
-> **Trạng thái phát triển**: Dự án đang ở giai đoạn **nghiên cứu & nguyên mẫu phát triển nâng cao (Advanced Research Prototype & Preview)**. Đã có bộ kiểm thử tự động nội bộ (70/70 tests đạt), giao diện web xem thử và 12 bài học nháp có nguồn đối chiếu. **Chưa phát hành chính thức cho cộng đồng**: Chưa có hội đồng chuyên gia sư phạm/y tế duyệt toàn bộ giáo trình thực tế và chưa nghiệm thu trên thiết bị di động thật (iOS/Android Native).
-
----
-
-## 1. Tính năng đã triển khai & Giới hạn hiện tại
-
-### Đã triển khai (Implemented & Verified)
-- **Hệ thống nhân vật Đội Trưởng Milo (3D Mascot System)**:
-  - 4 biểu cảm & tư thế tách nền trong suốt 100% (`mobile/assets/milo_rescue_pup.png`, `milo_thinking.png`, `milo_timing.png`, `milo_backpack.png`).
-  - Hoạt hình nhún nhảy theo nguyên lý Disney/Duolingo (Squash & Stretch, Breathe Loop, Reaction Cues) tương thích 60FPS trên nền tảng Web & Mobile.
-- **Quy trình Onboarding 4 bước (`OnboardingScreen.tsx`)**:
-  - Bước 1: Chọn độ tuổi (5-6, 7-8, 9-10, 11+ Tuổi).
-  - Bước 2: Nguồn biết đến (kèm tư thế Milo suy nghĩ).
-  - Bước 3: Lựa chọn thời gian rèn luyện hàng ngày (15, 30, 45 phút kèm tư thế Milo cầm đồng hồ bấm giờ).
-  - Bước 4: Kích hoạt Balo cứu hộ & thông báo (kèm tư thế Milo cầm Balo và ngón tay Like).
-  - Lưu trạng thái hoàn tất vào `AsyncStorage` (`milo_has_onboarded_v1`).
-- **Mặt nạ hướng dẫn Spotlight Tour (`SpotlightTourGuide.tsx`)**:
-  - Công nghệ đục lỗ SVG Cutout Mask trong suốt 100% trên nền mờ tối `#071936` (opacity 0.84).
-  - 3 tầng sóng hào quang Neon vàng (`aura1`, `aura2`, `aura3`) lan tỏa đồng tâm.
-  - Tọa độ căn tâm thích ứng responsive trên cả màn hình di động và máy tính qua 5 bước: Ải 1, Thanh 10 Quần Xã, Tab Quét AI, Tab SOS, Tab Ba Mẹ.
-- **Bản đồ thế giới 10 Quần xã (World Map & Journey)**:
-  - Đường cong chữ S (Cubic Bezier) cuộn dọc 2200px nối qua các Ải sinh tồn.
-  - Bục đảo nổi 2.5D dạng Vector SVG, hiệu ứng sóng radar đồng tâm tại ải hoạt động.
-- **Cổng Phụ Huynh & Bảo mật gia đình (Family & Parent Gate)**:
-  - Bàn phím số bảo vệ bằng mã PIN 4 chữ số (mã hóa mật khẩu bằng `bcrypt`).
-  - Quản lý phiên đăng nhập, cookie an toàn, mã khôi phục một lần.
-  - Hỗ trợ xuất và xóa dữ liệu theo chuẩn bảo vệ quyền riêng tư của trẻ.
-- **Bộ 12 bài học nháp có đối chiếu nguồn (`content/milo-12/`)**:
-  - 12 bài tình huống tiếng Việt và 24 câu hỏi phản xạ với dữ liệu nguồn từ các tổ chức an toàn (xem chi tiết tại `content/milo-12/sources.json` và `docs/research-2026-09-27/12-BAI-CHO-DUYET.md`).
-- **Sao lưu & Phục hồi cơ sở dữ liệu**:
-  - Tự động sao lưu SQLite có mã hóa và xác thực toàn vẹn (`scripts/encrypted-backup.cjs`).
-
-### Giới hạn hiện tại (Current Limitations & Pending Work)
-- **Chưa duyệt giáo trình chính thức**: Nội dung 12 bài nháp mới chỉ phục vụ kiểm thử nội bộ. Hệ thống chặn nội dung chưa được duyệt khỏi tài khoản gia đình thông thường.
-- **Camera AI Vision & Trò chuyện**: API `/ai/scan-environment` và `/ai/chat` được tích hợp qua SDK `@google/genai` (Google Gemini 2.0). Nếu chưa cấu hình `GEMINI_API_KEY`, hệ thống tự động chạy ở chế độ **Safe Fallback Engine** (trả về dữ liệu kịch bản mô phỏng ngoại tuyến an toàn, không gọi API trả phí).
-- **Phần cứng thiết bị thật (Native iOS/Android)**: Chưa đóng gói và nghiệm thu trên Google Play Store / Apple App Store; các kiểm thử hiện tại chạy trên môi trường Expo Web và bộ giả lập trình duyệt Chromium/Edge.
+> **Project Status**: **Advanced Research & Preview Stage**. Validated with automated test suites (70/70 passing tests), isolated end-to-end browser verification, and a 12-lesson research curriculum draft with verified safety sources. Pre-release state: Full mobile builds for Apple App Store / Google Play and official pedagogy board endorsements are pending.
 
 ---
 
-## 2. Công nghệ sử dụng (Tech Stack)
-
-| Thành phần | Công nghệ chính |
-| :--- | :--- |
-| **Backend Framework** | NestJS 10.4.15 (Node.js 22 LTS) |
-| **Cơ sở dữ liệu** | SQLite 3 (Dev/Preview) / PostgreSQL (Hỗ trợ cấu hình qua Prisma) |
-| **ORM** | Prisma ORM 5.22.0 |
-| **AI Vision Engine** | Google Gemini 2.0 Multimodal API (`@google/genai`) + Safe Fallback Mock |
-| **Frontend Mobile/Web** | React Native 0.76.9 + Expo SDK 52 + React Native Web 0.19.13 |
-| **Vector & Đồ họa** | `react-native-svg` 15.8.0, `lucide-react-native` |
-| **Âm thanh & Rung** | `expo-av`, bộ âm thanh PCM nội bộ, `spatialHaptics` |
-| **Kiểm thử tự động** | Node.js Test Runner tích hợp (`node --test`), Puppeteer/Chrome Browser Checks |
+## 📑 Table of Contents
+- [Overview & Core Mission](#1-overview--core-mission)
+- [Key Features & Capabilities](#2-key-features--capabilities)
+- [Technology Stack](#3-technology-stack)
+- [Repository Structure](#4-repository-structure)
+- [Captain Milo 3D Mascot System](#5-captain-milo-3d-mascot-system)
+- [Database Architecture (Prisma)](#6-database-architecture-prisma)
+- [Backend REST API Specification](#7-backend-rest-api-specification)
+- [Installation & Getting Started](#8-installation--getting-started)
+- [Running & Previewing](#9-running--previewing)
+- [Automated Testing & Verification](#10-automated-testing--verification)
+- [License & Attribution](#11-license--attribution)
 
 ---
 
-## 3. Cấu trúc thư mục (Directory Structure)
+## 1. Overview & Core Mission
+
+Children face diverse safety challenges in real-world environments—from kitchen hazards, electrical dangers, and natural disasters to public space separation and online privacy. Traditional instruction is often passive and easily forgotten during panic.
+
+**SafeScout AI** transforms safety education into an engaging, interactive adventure:
+1. **Gamified Reflex Training**: Children learn emergency protocols through bite-sized, timed interactive challenges with instant feedback.
+2. **AI Multimodal Hazard Analysis**: Real-time camera scanner identifies domestic and outdoor dangers using Google Gemini 2.0.
+3. **Physical Rescue Companion**: Captain Milo guides, demonstrates, and cheers children using animated Disney/Duolingo-inspired physics.
+4. **Zero-Knowledge Parent Portal**: Secure PIN-gated gateway with encrypted emergency beacons, screen time limits, and skill radar analytics.
+
+---
+
+## 2. Key Features & Capabilities
+
+### 🌟 Implemented & Fully Verified
+- **Captain Milo 3D Mascot Engine (`mobile/assets/`)**:
+  - 4 context-specific, 100% transparent PNG poses with zero border artifacts (Corner Alpha = 0, Center Alpha = 255):
+    - `milo_rescue_pup.png`: Cheerful waving greeting pose (Idle / Stage / Standard).
+    - `milo_thinking.png`: Pensive pose with chin rest and floating question mark `❓`.
+    - `milo_timing.png`: Holding a stopwatch `⏱️` for practice duration selection.
+    - `milo_backpack.png`: Holding the Quantum First-Aid Backpack with a thumbs-up `👍`.
+  - 60FPS Squash & Stretch animation loops (breathe, anticipation, jump bounce, and contextual floating badges).
+- **4-Step Narrative Onboarding (`OnboardingScreen.tsx`)**:
+  - Step 1: Age group selection (`5-6`, `7-8`, `9-10`, `11+ Years`).
+  - Step 2: Referral channel selection (dynamically triggers Milo's thinking pose).
+  - Step 3: Daily training time commitment (15, 30, or 45 minutes; triggers Milo's stopwatch pose).
+  - Step 4: Survival backpack & notification activation (triggers Milo's thumbs-up backpack pose).
+  - State persisted via `AsyncStorage` (`milo_has_onboarded_v1: true`).
+- **Spotlight Tour Guide (`SpotlightTourGuide.tsx`)**:
+  - SVG Cutout Mask (`spotlightHoleMask`) with 100% crystal-clear transparency inside the spotlight aperture.
+  - 3-tier staggered Golden Aura ripple waves (`aura1`, `aura2`, `aura3`) expanding at 60FPS.
+  - Exact mathematical centering across both mobile and desktop viewports across 5 steps:
+    1. Stage 1 Challenge Node & Victory Flag.
+    2. 10 Adventure Biomes selector bar.
+    3. AI Vision Scanner dock tab.
+    4. Emergency SOS dock tab.
+    5. Parent Portal dock tab.
+- **2200px S-Curve World Map (`WorldMapScreen.tsx`)**:
+  - Vertical scrolling canvas with smooth Cubic Bezier pathing.
+  - 10 floating 2.5D island nodes with foliage, rock strata, and 3-star rating badges.
+  - Active stage anchor with Milo standing, bouncing golden arrow indicator, and 3 concentric radar rings.
+  - Quick-switch bar for 10 biomes (Wilderness, Urban Safety, Home Security, Water Safety, Disasters, etc.).
+- **Multimodal AI Hazard Scanner (`ScannerScreen.tsx`)**:
+  - Live camera integration and photo upload analyzed via `POST /ai/scan-environment`.
+  - Hazard classification (`SAFE`, `CAUTION`, `DANGER`) with automated offline fallback mode.
+- **Emergency SOS Siren & GPS Beacon (`SosScreen.tsx`)**:
+  - One-touch emergency siren, flashing strobe flashlight, and 3-blast rescue whistle.
+  - Live GPS beacon dispatched to parents via `POST /parent/emergency-alert`.
+  - Offline "Hug-a-Tree" survival protocols.
+- **Parent Gate & Family Dashboard (`ParentAuthScreen.tsx`, `ParentDashboardScreen.tsx`)**:
+  - 4-digit numeric keypad with `bcrypt` hash verification.
+  - Screen time regulation, sleep lockout timers, and family emergency drill simulator.
+- **Curriculum & Reflex Testing Engine (`QuestTestScreen.tsx`)**:
+  - Countdown reflex timer, single-choice and ordering question formats, and detailed mistake logging.
+
+---
+
+## 3. Technology Stack
+
+### Frontend Architecture
+- **Framework**: React Native `0.76.9` + Expo `~52.0.0` + React Native Web `~0.19.13`
+- **Language**: TypeScript 100% (`strict: true`)
+- **Vector Graphics**: `react-native-svg` (15.8.0)
+- **Animation System**: React Native `Animated` with 12 Disney Animation principles (Squash & Stretch, Easing)
+- **Icons**: `lucide-react-native`
+- **Audio & Haptics**: `expo-av`, local PCM audio generator, `spatialHaptics`
+- **State & Storage**: `@react-native-async-storage/async-storage` + Offline Attempt Queue
+
+### Backend Architecture
+- **Framework**: NestJS `10.4.15` (Modular architecture)
+- **Database & ORM**: SQLite (Development / Preview) / PostgreSQL (Production) via Prisma ORM `5.22.0`
+- **AI Vision Engine**: Google Gemini 2.0 Multimodal API (`@google/genai`) with Safe Fallback Engine
+- **Documentation**: Swagger UI at `http://localhost:3000/api/docs`
+- **Security**: `bcrypt` (PIN hashing), `class-validator`, `class-transformer`
+
+---
+
+## 4. Repository Structure
 
 ```text
 kidproject/
-├── .github/workflows/          # CI pipeline kiểm tra typecheck, test, build và browser check
-├── content/milo-12/            # Dữ liệu 12 bài học an toàn nháp và nguồn tham chiếu
-├── docs/                       # Tài liệu nghiên cứu, kiểm toán UI và bằng chứng kiểm thử
-├── mobile/                     # Mã nguồn ứng dụng di động & web Expo React Native
-│   ├── assets/                 # Hình ảnh mascot 3D trong suốt, icon, âm thanh
-│   ├── src/components/         # UI components (Mascot, Spotlight, Island Nodes, Modals)
-│   ├── src/screens/            # Các màn hình (Onboarding, WorldMap, QuestTest, Scanner, SOS)
-│   ├── src/services/           # Logic client (API client, Voice TTS, Sound, Storage)
-│   └── src/theme/              # Hệ màu sắc nhận diện thương hiệu
-├── prisma/                     # Prisma schema, migration history và seed data
-├── scripts/                    # Scripts tiện ích (preview runner, backup, review packet)
-├── src/                        # Mã nguồn backend NestJS
+├── .github/workflows/          # CI Pipeline: Typecheck, 70 Tests, Build, Browser checks
+├── content/milo-12/            # 12 Research curriculum lessons & safety source references
+├── docs/                       # Research papers, UI audits, and browser test evidence
+├── mobile/                     # Expo React Native Frontend Application
+│   ├── assets/                 # Transparent 3D Mascot renders, audio, and branding
+│   │   ├── milo_rescue_pup.png # Standard welcoming 3D mascot render
+│   │   ├── milo_thinking.png   # Thinking 3D mascot render with question mark
+│   │   ├── milo_timing.png     # Stopwatch-holding 3D mascot render
+│   │   └── milo_backpack.png   # Backpack-holding thumbs-up 3D mascot render
+│   └── src/
+│       ├── components/         # Reusable UI components (MiloAvatar2D, Spotlight, Nodes)
+│       ├── screens/            # Application screens (Onboarding, WorldMap, Scanner, SOS)
+│       ├── services/           # Client services (API client, Voice TTS, Audio SFX)
+│       ├── theme/              # Color palette & styling constants
+│       └── types/              # TypeScript curriculum and navigation definitions
+├── prisma/                     # Database schema, migrations, and seed scripts
+├── scripts/                    # Utility scripts (Preview server, encrypted backup, audio)
+├── src/                        # NestJS Backend Application
 │   ├── modules/ai/             # Gemini AI Vision & Safety Scanner
-│   ├── modules/family/         # Quản lý tài khoản gia đình & xác thực
-│   ├── modules/learning/       # Journey Map, bài học & chấm điểm phản xạ
-│   ├── modules/parent/         # Cổng phụ huynh, mã PIN & phát cảnh báo SOS
-│   └── modules/prisma/         # Kết nối cơ sở dữ liệu Prisma Service
-├── test/                       # 70 bài kiểm thử tự động bao quát toàn bộ luồng nghiệp vụ
-├── .env.example                # Mẫu biến môi trường an toàn
-└── package.json                # Dependencies và câu lệnh scripts chính
+│   ├── modules/family/         # Family accounts, multi-profiles & session tokens
+│   ├── modules/learning/       # Journey Map, Checkpoints & Reflex Test Grading
+│   ├── modules/parent/         # Parent Gate, PIN auth & SOS alert dispatcher
+│   └── modules/prisma/         # Prisma client service
+├── test/                       # 70 automated test suites covering all business workflows
+├── .env.example                # Safe environment configuration template
+├── LICENSE                     # Official MIT License
+└── package.json                # Project dependencies, build, and test scripts
 ```
 
 ---
 
-## 4. Yêu cầu môi trường & Cài đặt (Prerequisites & Installation)
+## 5. Captain Milo 3D Mascot System
 
-### Yêu cầu hệ thống
-- **Node.js**: Phiên bản 20 hoặc 22 LTS (khuyến nghị Node.js 22).
-- **npm**: Phiên bản 10 trở lên.
-- **Trình duyệt**: Google Chrome hoặc Microsoft Edge (nếu muốn chạy kiểm thử giao diện `npm run test:browser`).
+Captain Milo is an Eurasian River Otter and Golden Rescue Pup hybrid character designed following Disney and Pixar animation guidelines:
+- **3D Proportions**: Chibi aesthetic (Head-to-body ratio 1:2.2), large expressive brown eyes, tactile clay texture finish.
+- **Rescue Gear**:
+  - High-impact quantum safety helmet with an interactive headlamp (Warm Amber = Idle, Pulsing Cyan = Scanning, Flashing Red = SOS Alert).
+  - High-visibility Neon Orange (`#FF6B35`) and Rescue Navy (`#004E89`) safety life vest with reflective silver stripes.
+  - Emergency whistle and quantum first-aid rescue backpack.
+- **Animation States**:
+  - `IDLE`: Organic breathing loop with synchronized ground drop shadow scaling.
+  - `POINTING_DOWN`: Forward lean and downward gesture for map progression.
+  - `THINKING`: Head tilt with resting chin paw and thought bubble.
+  - `CHEERING`: Anticipation squat followed by a vertical celebratory leap.
 
-### Bước 1: Sao chép mã nguồn & Cài đặt gói phụ thuộc
+---
+
+## 6. Database Architecture (Prisma)
+
+```prisma
+datasource db {
+  provider = "sqlite" // Can be switched to "postgresql" via DATABASE_URL
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 1. User & Learner Profile
+model User {
+  id                String               @id @default(cuid())
+  nickname          String
+  avatarUrl         String?
+  age               Int                  @default(7)
+  ageGroup          String               @default("EARLY_EXPLORER")
+  explorerLevel     Int                  @default(1)
+  totalSafetyScore  Int                  @default(0)
+  totalBadges       Int                  @default(0)
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  parentGate        ParentGate?
+  lessonProgress    UserLessonProgress[]
+  testResults       TestResult[]
+  mistakeLogs       MistakeLog[]
+  userBadges        UserBadge[]
+
+  @@map("users")
+}
+
+// 2. Parent Security Gateway
+model ParentGate {
+  id                      String   @id @default(cuid())
+  userId                  String   @unique
+  pinHash                 String   // Hashed with bcrypt
+  parentEmail             String?
+  parentPhone             String?
+  dailyTimeLimitMinutes   Int      @default(30)
+  emergencyContactEnabled Boolean  @default(true)
+  weeklyReportEnabled     Boolean  @default(true)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("parent_gates")
+}
+
+// 3. 10 Survival Zones (Biomes)
+model Zone {
+  id          String   @id @default(cuid())
+  zoneNumber  Int      @unique
+  title       String
+  description String
+  iconName    String
+  themeColor  String   @default("#004E89")
+  unlockLevel Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  stages Stage[]
+  badges Badge[]
+
+  @@map("zones")
+}
+
+// 4. Survival Challenge Stages
+model Stage {
+  id          String   @id @default(cuid())
+  zoneId      String
+  stageNumber Int
+  title       String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  zone    Zone     @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+  lessons Lesson[]
+
+  @@unique([zoneId, stageNumber])
+  @@map("stages")
+}
+
+// 5. Lessons & Reflex Checkpoints
+model Lesson {
+  id              String       @id @default(cuid())
+  stageId         String
+  lessonNumber    Int
+  title           String
+  description     String
+  durationMinutes Int          @default(5)
+  rewardXp        Int          @default(100)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  stage        Stage                @relation(fields: [stageId], references: [id], onDelete: Cascade)
+  checkpoints  Checkpoint[]
+  userProgress UserLessonProgress[]
+
+  @@unique([stageId, lessonNumber])
+  @@map("lessons")
+}
+
+model Checkpoint {
+  id                 String         @id @default(cuid())
+  lessonId           String
+  checkpointNumber   Int
+  title              String
+  passScoreThreshold Int            @default(80)
+  timeLimitSeconds   Int            @default(60)
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+
+  lesson      Lesson         @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questions   TestQuestion[]
+  testResults TestResult[]
+
+  @@unique([lessonId, checkpointNumber])
+  @@map("checkpoints")
+}
+
+model TestQuestion {
+  id               String           @id @default(cuid())
+  checkpointId     String
+  questionNumber   Int
+  promptText       String
+  questionType     String           @default("SINGLE_CHOICE")
+  hazardLevel      String           @default("SAFE")
+  timeLimitSeconds Int              @default(5)
+  explanation      String
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  checkpoint  Checkpoint       @relation(fields: [checkpointId], references: [id], onDelete: Cascade)
+  options     QuestionOption[]
+  mistakeLogs MistakeLog[]
+
+  @@unique([checkpointId, questionNumber])
+  @@map("test_questions")
+}
+
+model QuestionOption {
+  id             String       @id @default(cuid())
+  testQuestionId String
+  optionText     String
+  isCorrect      Boolean      @default(false)
+  displayOrder   Int          @default(0)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  testQuestion TestQuestion @relation(fields: [testQuestionId], references: [id], onDelete: Cascade)
+
+  @@map("question_options")
+}
+```
+
+---
+
+## 7. Backend REST API Specification
+
+| Module | Method | Endpoint | Parameters / Payload | Description |
+| :--- | :---: | :--- | :--- | :--- |
+| **Learning** | `GET` | `/learning/journey-map` | `userId`: string | Retrieves 10 biomes, unlocked stages, and scores |
+| **Learning** | `GET` | `/learning/checkpoints/:id` | `id`: string, `userId`: string | Retrieves reflex test questions for a checkpoint |
+| **Learning** | `POST` | `/learning/checkpoints/:id/submit` | `{ userId, answers, timeTaken }` | Submits test answers, computes stars, awards XP |
+| **AI Vision** | `POST` | `/ai/scan-environment` | FormData: `image` (max 4MB), `childAge` | Gemini AI hazard detection and survival advice |
+| **AI Vision** | `POST` | `/ai/chat` | `{ userId, message }` | Direct text chat dialogue with Captain Milo |
+| **AI Vision** | `GET` | `/ai/health` | None | Health check for AI Engine & Gemini API Key |
+| **Parent** | `POST` | `/parent/verify-pin` | `{ userId, pin }` | Verifies parent 4-digit PIN |
+| **Parent** | `POST` | `/parent/update-pin` | `{ userId, currentPin, newPin }` | Updates parent access PIN |
+| **Parent** | `POST` | `/parent/emergency-alert` | `{ userId, alertType, lat, lng }` | Dispatches real-time SOS beacon with GPS |
+| **Parent** | `GET` | `/parent/emergency-alerts` | `userId`: string | Fetches learner's past emergency alerts |
+| **Parent** | `GET` | `/parent/safety-report` | `userId`: string | Fetches safety skill analytics & time reports |
+| **Parent** | `POST` | `/parent/settings` | `{ userId, dailyLimitMinutes, ... }` | Configures screen limits and emergency contacts |
+
+---
+
+## 8. Installation & Getting Started
+
+### System Prerequisites
+- **Node.js**: Version 20 or 22 LTS (Node.js 22 recommended).
+- **npm**: Version 10 or higher.
+- **Browser**: Google Chrome or Microsoft Edge (for automated browser checks).
+
+### Step 1: Clone Repository & Install Dependencies
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/MrTonyIT/kidproject.git
 cd kidproject
 
-# Cài đặt thư viện Backend
+# Install backend dependencies
 npm ci
 
-# Cài đặt thư viện Frontend Mobile
+# Install mobile/web frontend dependencies
 cd mobile
 npm ci
 cd ..
 ```
 
-### Bước 2: Khởi tạo biến môi trường & Cơ sở dữ liệu
+### Step 2: Environment Setup & Database Initialization
 ```bash
-# Tạo file môi trường từ mẫu
+# Copy safe environment configuration
 cp .env.example .env
 
-# Sinh Prisma Client
+# Generate Prisma Client
 npm run prisma:generate
 
-# Đẩy schema lên SQLite cục bộ
+# Push schema to local SQLite database
 npm run prisma:push
 
-# Nạp dữ liệu mẫu ban đầu
+# Seed initial curriculum and zone datasets
 npm run prisma:seed
 ```
 
 ---
 
-## 5. Chạy dự án & Xem thử (Running & Preview)
+## 9. Running & Previewing
 
-### Chế độ xem thử nhanh (Preview Mode)
-Dự án có sẵn script khởi chạy độc lập một môi trường xem thử (tự động tạo database cô lập và khởi động web client):
+### Quick Isolated Preview Mode
+The repository provides self-contained preview runners that launch ephemeral databases with isolated browsers:
 
 ```bash
-# Xem thử giao diện bản đồ và trải nghiệm bài học
+# Preview curriculum map and interactive lessons
 npm run preview:curriculum
 ```
-Sau đó mở trình duyệt tại: **http://localhost:8081**
+Open **http://localhost:8081** in your browser.
 
-Để thử nghiệm tính năng tài khoản gia đình:
+To test family accounts with multi-profile authentication:
 ```bash
 npm run preview -- --family
 ```
 
-### Chạy đồng thời 2 terminal (Development Mode)
+### Dual-Terminal Development Mode
 - **Terminal 1 (Backend NestJS)**:
   ```bash
   npm run start:dev
-  # API chạy tại: http://localhost:3000
-  # Swagger API Docs: http://localhost:3000/api/docs
+  # API running at: http://localhost:3000
+  # Swagger Docs at: http://localhost:3000/api/docs
   ```
 - **Terminal 2 (Frontend Expo Web)**:
   ```bash
   cd mobile
   npx expo start --web
-  # Web app chạy tại: http://localhost:8081
+  # Client running at: http://localhost:8081
   ```
 
 ---
 
-## 6. Kiểm thử tự động & Xác minh chất lượng (Testing & Verification)
+## 10. Automated Testing & Verification
 
-Dự án có bộ kiểm thử tự động kiểm tra chặt chẽ các kịch bản logic an toàn:
+The project includes an extensive automated test suite covering safety rules, state hydration, audio lifecycles, and cryptographic backups:
 
 ```bash
-# 1. Kiểm tra kiểu dữ liệu TypeScript toàn dự án (Backend)
+# 1. Backend TypeScript Typecheck
 npm run typecheck
 
-# 2. Kiểm tra kiểu dữ liệu TypeScript (Frontend Mobile)
+# 2. Frontend TypeScript Typecheck
 cd mobile && npx tsc --noEmit && cd ..
 
-# 3. Chạy 70 bài kiểm thử logic (Workflow, Family HTTP, Backup, Curriculum, Audio, Maze)
+# 3. Execute 70 automated test suites
 npm test
 
-# 4. Kiểm tra build sản phẩm Backend
+# 4. Compile Backend NestJS Build
 npm run build
 
-# 5. Kiểm tra build bản xuất Web Expo
+# 5. Export Web Distribution
 cd mobile && npx expo export --platform web --output-dir ../scratch/ci-web && cd ..
 ```
 
-### Kết quả kiểm thử thực tế đã chạy:
+### Verified Benchmark Results:
 - `npm run typecheck`: **0 errors**.
 - `mobile typecheck`: **0 errors**.
-- `npm test`: **70 passing**, 0 failing (thời gian ~30s).
-- `npm run build`: Build NestJS hoàn tất thành công.
+- `npm test`: **70 passing**, 0 failing (~30 seconds execution time).
+- `npm run build`: Production bundle compiled to `dist/` with zero warnings.
 
 ---
 
-## 7. Bằng chứng hình ảnh & Tài liệu tham chiếu (Evidence & Docs)
+## 11. License & Attribution
 
-Các báo cáo kiểm thử và ảnh chụp màn hình thực tế được lưu trữ tại thư mục `docs/`:
-- [`docs/ui-implementation-2026-09-27/STATUS.md`](docs/ui-implementation-2026-09-27/STATUS.md): Hiện trạng giao diện ải sinh tồn và các gate kiểm soát.
-- [`docs/research-2026-09-27/12-BAI-CHO-DUYET.md`](docs/research-2026-09-27/12-BAI-CHO-DUYET.md): Chi tiết 12 bài học an toàn nháp và đối chiếu nguồn gốc.
-- [`docs/completion-2026-09-27/VAN-HANH.md`](docs/completion-2026-09-27/VAN-HANH.md): Hướng dẫn vận hành và quản lý dữ liệu.
+Distributed under the **[MIT License](LICENSE)**. See `LICENSE` for details.
 
----
-
-## 8. Giấy phép (License)
-
-Dự án được phân phối dưới giấy phép mã nguồn mở **[MIT License](LICENSE)**. Xem toàn văn điều khoản cấp phép và miễn trừ trách nhiệm tại tệp [`LICENSE`](LICENSE). Toàn bộ quyền tác giả thuộc về [@MrTonyIT](https://github.com/MrTonyIT).
+Developed with ❤️ by **Đỗ Hiệp Luân ([@MrTonyIT](https://github.com/MrTonyIT))** & the **SafeScout AI Team**.

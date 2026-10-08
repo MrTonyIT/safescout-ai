@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "KidsSafe AI - Đội Trưởng Milo",
-    "slug": "kidssafe-ai",
+    "name": "SafeScout AI - Captain Milo",
+    "slug": "safescout-ai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,14 +13,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.kidssafe.explorer"
+      "bundleIdentifier": "com.safescout.academy"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F5F7F4"
       },
-      "package": "com.kidssafe.explorer"
+      "package": "com.safescout.academy"
     },
     "web": {
       "favicon": "./assets/favicon.png"

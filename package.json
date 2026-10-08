@@ -1,10 +1,10 @@
 {
-  "name": "kidssafe-ai-backend",
+  "name": "safescout-ai-backend",
   "version": "1.0.0",
-  "description": "The Secret Explorer Academy (KidsSafe AI) - Core Backend Engine & AI Safety System",
-  "author": "KidsSafe AI Team",
+  "description": "SafeScout AI (The Secret Explorer Academy) - Autonomous Child Safety, Survival Skills & Reflex Learning Platform",
+  "author": "SafeScout AI Team",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -46,6 +46,7 @@
     "@types/express": "^5.0.0",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.10.2",
+    "axios": "^1.20.0",
     "prisma": "^5.22.0",
     "source-map-support": "^0.5.21",
     "ts-loader": "^9.5.1",
