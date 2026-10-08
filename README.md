@@ -117,7 +117,7 @@ Children face diverse safety challenges in real-world environments—from kitche
 ## 4. Repository Structure
 
 ```text
-kidproject/
+safescout-ai/
 ├── .github/workflows/          # CI Pipeline: Typecheck, 70 Tests, Build, Browser checks
 ├── content/milo-12/            # 12 Research curriculum lessons & safety source references
 ├── docs/                       # Research papers, UI audits, and browser test evidence
@@ -356,8 +356,8 @@ model QuestionOption {
 ### Step 1: Clone Repository & Install Dependencies
 ```bash
 # Clone the repository
-git clone https://github.com/MrTonyIT/kidproject.git
-cd kidproject
+git clone https://github.com/MrTonyIT/safescout-ai.git
+cd safescout-ai
 
 # Install backend dependencies
 npm ci
