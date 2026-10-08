@@ -1,5 +1,21 @@
 # Milo — KidsSafe AI (The Secret Explorer Academy)
 
+[![Node.js](https://img.shields.io/badge/NODE.JS-20_%7C_22_LTS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TYPESCRIPT-5.7+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![NestJS](https://img.shields.io/badge/NESTJS-10.4.15-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com)
+[![React Native](https://img.shields.io/badge/REACT_NATIVE-0.76.9-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactnative.dev)
+[![Expo](https://img.shields.io/badge/EXPO-SDK_52-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev)
+
+[![Prisma](https://img.shields.io/badge/PRISMA-5.22.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io)
+[![SQLite](https://img.shields.io/badge/SQLITE-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
+[![Google Gemini](https://img.shields.io/badge/GOOGLE_GEMINI-2.0_MULTIMODAL-8E75B2?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
+[![Vector SVG](https://img.shields.io/badge/VECTOR_SVG-2.5D_RENDER-FF6B35?style=for-the-badge&logo=svg&logoColor=white)](https://github.com/software-mansion/react-native-svg)
+
+[![Tests](https://img.shields.io/badge/TESTS-70_PASSING-00C853?style=for-the-badge&logo=checkmarx&logoColor=white)](test/)
+[![CI](https://img.shields.io/badge/CI-PASSING-00C853?style=for-the-badge&logo=githubactions&logoColor=white)](.github/workflows/internal-checks.yml)
+[![Mascot](https://img.shields.io/badge/MASCOT-CAPTAIN_MILO_3D-F59E0B?style=for-the-badge&logo=paw&logoColor=white)](mobile/assets/)
+[![License](https://img.shields.io/badge/LICENSE-MIT-0284C7?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
+
 Nền tảng học kỹ năng an toàn và phản xạ sinh tồn qua tình huống tương tác dành cho trẻ em (5–12 tuổi) cùng phụ huynh, tích hợp trợ thủ hoạt hình 3D **Đội Trưởng Milo (Captain Milo)** và động cơ đánh giá phản xạ.
 
 > **Trạng thái phát triển**: Dự án đang ở giai đoạn **nghiên cứu & nguyên mẫu phát triển nâng cao (Advanced Research Prototype & Preview)**. Đã có bộ kiểm thử tự động nội bộ (70/70 tests đạt), giao diện web xem thử và 12 bài học nháp có nguồn đối chiếu. **Chưa phát hành chính thức cho cộng đồng**: Chưa có hội đồng chuyên gia sư phạm/y tế duyệt toàn bộ giáo trình thực tế và chưa nghiệm thu trên thiết bị di động thật (iOS/Android Native).
@@ -195,4 +211,4 @@ Các báo cáo kiểm thử và ảnh chụp màn hình thực tế được lư
 
 ## 8. Giấy phép (License)
 
-Hiện tại dự án **chưa có file LICENSE chính thức**. Toàn bộ quyền sở hữu mã nguồn thuộc về tác giả [@MrTonyIT](https://github.com/MrTonyIT).
+Dự án được phân phối dưới giấy phép mã nguồn mở **[MIT License](LICENSE)**. Xem toàn văn điều khoản cấp phép và miễn trừ trách nhiệm tại tệp [`LICENSE`](LICENSE). Toàn bộ quyền tác giả thuộc về [@MrTonyIT](https://github.com/MrTonyIT).
