@@ -7,9 +7,9 @@ const fs=require('node:fs');
  const send=(method,params={})=>new Promise((r,j)=>{const id=++seq;tasks.set(id,{r,j});ws.send(JSON.stringify({id,method,params}));});
  const ev=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error('Page evaluation failed');return r.result.value;};
  const wait=ms=>new Promise(r=>setTimeout(r,ms)),evidence=[];
- const until=async text=>{for(let i=0;i<100;i++){if((await ev('document.body.innerText')).includes(text))return;await wait(100);}throw Error('Missing '+text);};
+ const until=async text=>{for(let i=0;i<100;i++){if((await ev('document.body?.innerText || ""')).includes(text))return;await wait(100);}throw Error('Missing '+text);};
  const capture=async(name)=>{
-  const metrics=await ev(`(()=>{const b=[...document.querySelectorAll('[role="button"],input')].map(e=>{const r=e.getBoundingClientRect();return {label:e.getAttribute('aria-label')||e.textContent.trim(),x:Math.round(r.x),y:Math.round(r.y),width:Math.round(r.width),height:Math.round(r.height),disabled:e.getAttribute('aria-disabled')==='true'};});return {width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,controls:b,text:document.body.innerText};})()`);
+  const metrics=await ev(`(()=>{const b=[...document.querySelectorAll('[role="button"],input')].map(e=>{const r=e.getBoundingClientRect();return {label:e.getAttribute('aria-label')||e.textContent.trim(),x:Math.round(r.x),y:Math.round(r.y),width:Math.round(r.width),height:Math.round(r.height),disabled:e.getAttribute('aria-disabled')==='true'};});return {width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,controls:b,text:document.body?.innerText || ""};})()`);
   evidence.push({name,...metrics});const image=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync(__dirname+'/'+name+'.png',Buffer.from(image.data,'base64'));
  };
  try{

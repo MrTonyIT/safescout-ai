@@ -97,10 +97,13 @@ async function mapSnapshot() {
     return result.result.value;
   };
   const until = async (expression, label, attempts = 120) => {
-    for (let i = 0; i < attempts; i++) {if (await ev(expression)) return; await wait(75);}
+    for (let i = 0; i < attempts; i++) {
+      try { if (await ev(expression)) return; } catch {}
+      await wait(75);
+    }
     throw new Error(`UI wait timed out: ${label}`);
   };
-  const visibleText = text => until(`document.body.innerText.includes(${JSON.stringify(text)})`, text);
+  const visibleText = text => until(`(document.body?.innerText || "").includes(${JSON.stringify(text)})`, text);
   const visibleControl = label => `Array.from(document.querySelectorAll('[role="button"],[role="tab"],[role="switch"]')).find(e => (e.getAttribute('aria-label') === ${JSON.stringify(label)} || e.textContent.trim() === ${JSON.stringify(label)}) && e.getClientRects().length && e.getAttribute('aria-hidden') !== 'true')`;
   const click = async (label, settle = 150) => {
     assert.ok(await ev(`(() => {const e = ${visibleControl(label)}; if (!e || e.disabled || e.getAttribute('aria-disabled') === 'true') return false; e.scrollIntoView({block: 'nearest'}); e.click(); return true;})()`), `Enabled control: ${label}`);
@@ -113,7 +116,7 @@ async function mapSnapshot() {
     assert.deepEqual(outside, [], 'Visible controls must not overflow horizontally');
   };
   const shot = async (name, validate = true) => {
-    const metrics = await ev('({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,text:document.body.innerText})');
+    const metrics = await ev('({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,text:document.body?.innerText || ""})');
     if (validate) {assert.ok(metrics.scrollWidth <= metrics.width + 1, `Document overflow: ${name}`); await controlsFit();}
     const image = await send('Page.captureScreenshot', {format: 'png', captureBeyondViewport: false});
     fs.writeFileSync(path.join(out, name + '.png'), Buffer.from(image.data, 'base64'));
@@ -126,7 +129,7 @@ async function mapSnapshot() {
     assert.notEqual(current, null, `Switch exists: ${label}`);
     if (current !== value) await click(label, 150);
     assert.equal(await switchState(label), value, `Switch applied: ${label}`);
-    await until(`!document.body.innerText.includes('Đang lưu tùy chọn…')`, 'preference persisted');
+    await until(`!(document.body?.innerText || "").includes('Đang lưu tùy chọn…')`, 'preference persisted');
   };
   const openSettings = async () => {
     if (await ev(`Boolean(${visibleControl('Tùy chọn trải nghiệm')})`)) await click('Tùy chọn trải nghiệm');
@@ -151,7 +154,7 @@ async function mapSnapshot() {
     // Device-level test preferences only; no progress, account, drafts or submission queue is deleted.
     await ev(`localStorage.removeItem(${JSON.stringify(preferenceKey)})`);
     await send('Page.reload');
-    await until(`document.body.innerText.includes('Vào bản học thử') || Boolean(${visibleControl('Ba lô')})`, 'welcome or game dock');
+    await until(`(document.body?.innerText || "").includes('Vào bản học thử') || Boolean(${visibleControl('Ba lô')})`, 'welcome or game dock');
     if (await ev(`Boolean(${visibleControl('Vào bản học thử')})`)) await click('Vào bản học thử');
     await until(`Boolean(document.querySelector('[data-testid="world-cloud-0"]'))`, 'map atmosphere mounted');
     motion.normal = await cloudSamples();
@@ -171,7 +174,7 @@ async function mapSnapshot() {
     assert.equal(await ev(`(${visibleControl('Tiếp tục khám phá')})?.getAttribute('aria-disabled')`), 'true', 'Locked collection entry cannot open a lesson');
     await shot('restored-collection-locked-390');
     await click('Huy hiệu'); await visibleText('Huy hiệu học tập');
-    assert.ok(!(await ev('document.body.innerText')).includes('ĐÃ NHẬN'), 'Fresh profile must have no earned badge cards');
+    assert.ok(!(await ev('document.body?.innerText || ""')).includes('ĐÃ NHẬN'), 'Fresh profile must have no earned badge cards');
     await top(); await shot('restored-badges-390');
     await click('Bản đồ'); await until(`Boolean(document.querySelector('[data-testid="world-cloud-0"]'))`, 'return to map');
     audio.beforeEnable = await ev('window.__miloMediaProbe.summary()');
@@ -237,7 +240,7 @@ async function mapSnapshot() {
     const route = [initialCell];
     maze.path.push(initialCell);
     for (let step = 0; step < 100; step++) {
-      if ((await ev('document.body.innerText')).includes('Con đã tìm được đường tới trại!')) break;
+      if ((await ev('document.body?.innerText || ""')).includes('Con đã tìm được đường tới trại!')) break;
       const adjacent = await ev(`Array.from(document.querySelectorAll('[data-testid^="arcade-cell-"]')).filter(e=>e.getAttribute('role')==='button'&&e.getAttribute('aria-disabled')!=='true').map(e=>({id:e.getAttribute('data-testid'),label:e.getAttribute('aria-label')}))`);
       let next = adjacent.find(cell => !visited.has(cell.id));
       if (next) {visited.add(next.id); route.push(next.id);}
@@ -251,7 +254,7 @@ async function mapSnapshot() {
     maze.moves = await ev(`document.querySelector('[data-testid="explorer-arcade"]').innerText.match(/\d+ bước đã đi/)?.[0]`);
     await shot('restored-arcade-win-320'); await size(390, 844); await shot('restored-arcade-win-390');
     await click('Khám phá đường tiếp theo'); await visibleText('2/3');
-    assert.ok(!(await ev('document.body.innerText')).includes('Con đã tìm được đường tới trại!'), 'Next maze resets the win state');
+    assert.ok(!(await ev('document.body?.innerText || ""')).includes('Con đã tìm được đường tới trại!'), 'Next maze resets the win state');
     await click('Đóng sân chơi'); await until("!document.querySelector('[data-testid=\"explorer-arcade\"]')", 'arcade dismissed');
     const after = await mapSnapshot();
     assert.deepEqual(after, before, 'Arcade, browsing collection and settings must not change learning XP, badges or completion');
@@ -265,7 +268,7 @@ async function mapSnapshot() {
     }, null, 2));
     console.log('Restoration checks passed: collection, locked details, actual media playback/mute, cloud motion/reduction, playable maze, zero learning XP changes.');
   } catch (error) {
-    fs.writeFileSync(path.join(out, 'browser-restoration-failure.txt'), `${error.stack || error}\n${await ev('document.body.innerText').catch(() => '')}`);
+    fs.writeFileSync(path.join(out, 'browser-restoration-failure.txt'), `${error.stack || error}\n${await ev('document.body?.innerText || ""').catch(() => '')}`);
     fs.writeFileSync(path.join(out, 'browser-restoration-partial.json'), JSON.stringify({passed: false, motion, audio, maze, screenshots, runtimeErrors}, null, 2));
     await shot('restored-failure', false).catch(() => {});
     throw error;

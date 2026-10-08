@@ -8,10 +8,10 @@ const wait=ms=>new Promise(r=>setTimeout(r,ms));
  ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const task=tasks.get(m.id);tasks.delete(m.id);m.error?task.j(m.error):task.r(m.result);}else if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text);};
  const send=(method,params={})=>new Promise((r,j)=>{const id=++seq;tasks.set(id,{r,j});ws.send(JSON.stringify({id,method,params}));});
  const ev=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true,userGesture:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
- const until=async text=>{for(let i=0;i<100;i++){if((await ev('document.body.innerText')).includes(text))return;await wait(100);}throw Error('Not visible: '+text);};
+ const until=async text=>{for(let i=0;i<100;i++){try{const t=await ev('(document.body?.innerText || "")');if(t&&t.includes(text))return;}catch{}await wait(100);}throw Error('Not visible: '+text);};
  const click=async text=>{for(let i=0;i<100;i++){const ready=await ev('Array.from(document.querySelectorAll("[role]")).some(e=>e.getAttribute("role")==="button" && (e.textContent.trim()==='+JSON.stringify(text)+' || e.getAttribute("aria-label")==='+JSON.stringify(text)+') && e.getAttribute("aria-disabled")!=="true")');if(ready)break;await wait(100);}const ok=await ev(`(()=>{const e=[...document.querySelectorAll('[role="button"],[role="radio"],[role="checkbox"]')].find(e=>(e.textContent.trim()===${JSON.stringify(text)}||e.getAttribute('aria-label')===${JSON.stringify(text)})&&e.getClientRects().length);if(!e)return false;e.click();return true;})()`);assert.ok(ok,'button '+text);await wait(250);};
  const size=async(w,h)=>{await send('Emulation.setDeviceMetricsOverride',{width:w,height:h,deviceScaleFactor:1,mobile:true});await wait(150);};
- const metrics=[];const shot=async name=>{metrics.push({name,...await ev('({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,text:document.body.innerText})')});const img=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync(path.join(__dirname,name+'.png'),Buffer.from(img.data,'base64'));};
+ const metrics=[];const shot=async name=>{metrics.push({name,...await ev('({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,text:document.body?.innerText || ""})')});const img=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync(path.join(__dirname,name+'.png'),Buffer.from(img.data,'base64'));};
 
  try{
  await send('Runtime.enable');await send('Page.enable');await size(320,568);await send('Page.navigate',{url:'http://localhost:8081'});await until('Tạo tài khoản mới');
@@ -22,7 +22,7 @@ const wait=ms=>new Promise(r=>setTimeout(r,ms));
  await until('Mật khẩu phụ huynh');await fill('Mật khẩu phụ huynh','Synthetic-browser-password-123');await fill('Biệt danh hồ sơ mới (không dùng họ tên thật)','Hồ sơ thử');await click('Thêm hồ sơ');await until('Học cùng Hồ sơ thử');
  for(const [w,h] of [[320,568],[390,844],[768,1024],[1440,900]]){await size(w,h);await shot('family-parent-'+w);}
  await size(320,568);await click('Học cùng Hồ sơ thử');await until('Chưa có nội dung học trong môi trường này.');await shot('family-empty-approved-content');
- assert.ok((await ev('document.body.innerText')).includes('0 XP học tập'));await click('Góc cha mẹ / đổi hồ sơ');await until('Mật khẩu phụ huynh');
+ assert.ok((await ev('document.body?.innerText || ""')).includes('0 XP học tập'));await click('Góc cha mẹ / đổi hồ sơ');await until('Mật khẩu phụ huynh');
  await fill('Mật khẩu phụ huynh','Synthetic-browser-password-123');await click('Xem 50 bài gần nhất của Hồ sơ thử');await until('Chưa có bài được máy chủ nhận.');
  await fill('Mô tả ngắn (5–1000 ký tự)','Synthetic browser feedback only');await click('Gửi phản hồi');await until('Máy chủ đã nhận phản hồi. Mã đối chiếu:');
  await click('Xóa hồ sơ Hồ sơ thử');await click('Xác nhận xóa vĩnh viễn');await until('Chưa có hồ sơ.');
